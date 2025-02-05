@@ -1,0 +1,202 @@
+{
+  "links": {
+    "login": "تسجيل الدخول",
+    "aboutUs": "من نحن",
+    "products": "المنتجات",
+    "contactUs": "اتصل بنا"
+  },
+  "footer": {
+    "title": "تعرف على برايم",
+    "description": "يعتبر متجر برايم متجر متخصص بالمستحضرات الصحية ونقوم باختيار منتجاتنا بعناية لكي تكون الافضل للمستخدم نحن لا نبحث عن السعر الجيد فقط ولكننا نبحث عن الجودة و نهتم بصحة عميلنا وحصوله على افضل المنتجات الصحية"
+  },
+  "footerLinks": {
+    "usefulLinks": "روابط مفيدة",
+    "help": "للمساعدة",
+    "shippingPolicy": "سياسة الشحن",
+    "returnPolicy": "سياسة الاسترجاع",
+    "refundPolicy": "سياسة الاسترداد",
+    "contactUs": "اتصل بنا"
+  },
+  "footerSocialMedia": {
+    "followUs": "للمتابعة"
+  },
+  "footerSubscribe": {
+    "title": "لتزيد مبيعاتك عبر برايم... سجل الأن",
+    "fullNamePlaceholder": "الاسم الكامل",
+    "fullNameRequired": "الاسم الكامل مطلوب",
+    "phoneNumberPlaceholder": "رقم الهاتف",
+    "phoneNumberRequired": "رقم الهاتف مطلوب",
+    "submitButton": "ارسل طلبك الان"
+  },
+  "subscribeNow": {
+    "emailPlaceholder": "ادخل بريدك ليصلك كل جديد",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "subscribeButton": "اشترك الآن",
+    "successTitle": "تم الاشتراك بنجاح",
+    "successMessage": "شكراً لاشتراكك!",
+    "errorTitle": "فشل الاشتراك",
+    "errorMessage": "حدث خطأ. يرجى المحاولة مرة أخرى."
+  },
+  "headers": {
+    "We_chose_for_you": "اخترنا لك",
+    "Select_category": " اختر التصنيف",
+    "Today_offers": "عروض اليوم",
+    "most_requested_products": "المنتجات الأكثر طلباً",
+    "related_products": "منتجات ذات صلة"
+  },
+  "haderPages": {
+    "Who_we_are": "من نحن",
+    "shopping_cart": "سلة التسوق",
+    "checkout": "الدفع",
+    "contact_us": "اتصل بنا",
+    "profile": "الملف الشخصي",
+    "Return_and_Exchange_Policy": "سياسة الاسترجاع والتبديل",
+    "product_details": "تفاصيل المنتج",
+    "product_list": "قائمة المنتجات",
+    "shipping_policy": "سياسة الشحن",
+    "thank_you": "شكراً لك"
+  },
+  "listProductHeader": {
+    "storeName": "متجر برايم"
+  },
+  "productFilter": {
+    "allProducts": "جميع المنتجات"
+  },
+  "aboutUsSection": {
+    "title": "قصتنا",
+    "description": "نؤمن بقوة الطبيعة في تعزيز جمالك الطبيعي. منتجاتنا مصنوعة بعناية باستخدام أفضل المكونات العضوية."
+  },
+  "singleProductOverView": {
+    "reviews": "(1.234 تقييمات)",
+    "addToCart": "أضف إلى السلة",
+    "deliveryReturn": "التوصيل والإرجاع",
+    "askQuestion": "اطرح سؤالاً",
+    "estimatedDelivery": "التوصيل المتوقع:",
+    "itemsInStock": "عناصر في المخزن",
+    "sku": "الرمز:",
+    "categories": "الفئات:",
+    "tag": "العلامة:",
+    "getItToday": "احصل عليه اليوم",
+    "freeShipping": "شحن مجاني",
+    "freeShippingDescription": "شحن مجاني للطلبات فوق 75 دولاراً.",
+    "supportEveryday": "دعم يومي",
+    "supportEverydayDescription": "دعم من الساعة 8:30 صباحاً حتى 10:00 مساءً كل يوم",
+    "dayReturns": "إرجاع خلال 100 يوم",
+    "dayReturnsDescription": "لست معجباً؟ احصل على استرداد. لديك 100 يوم لتحطيم قلوبنا."
+  },
+  "willLoveToo": {
+    "title": " منتجات من نفس الفقه"
+  },
+  "ourServers": {
+    "fasterShippingTitle": "شحن أسرع",
+    "fasterShippingDesc": "نقدم خدمة شحن سريعة وموثوقة لتوصيل طلباتك في أسرع وقت ممكن.",
+    "cottonMaterialsTitle": "خامات قطنية",
+    "cottonMaterialsDesc": "منتجاتنا مصنوعة من خامات قطنية عالية الجودة لتوفير الراحة والأناقة.",
+    "highQualityTitle": "جودة عالية",
+    "highQualityDesc": "نحرص على تقديم منتجات عالية الجودة تلبي توقعات عملائنا.",
+    "highCompatibilityTitle": "توافق عالي",
+    "highCompatibilityDesc": "منتجاتنا متوافقة مع مختلف الاستخدامات والاحتياجات اليومية."
+  },
+  "aboutUsHeader": {
+    "title": "مرحبًا بكم في بريم - وجهتكم المفضلة للتسوق الإلكتروني",
+    "description": "في بريم، نحن نحرص على تقديم أفضل تجربة تسوق إلكتروني لكم. نقدم تشكيلة واسعة من المنتجات عالية الجودة، من الموضة والإكسسوارات إلى الأدوات المنزلية والإلكترونيات. نركز على رضا العملاء ونسعى لتوفير تجربة تسوق سلسة، مما يضمن لكم العثور على ما تحتاجونه بأسعار تنافسية. اكتشفوا راحة التسوق مع بريم واجعلونا وجهتكم الأولى لجميع احتياجاتكم الإلكترونية."
+  },
+  "contactForm": {
+    "title": "أرسل لنا رسالة",
+    "subtitle": "للتواصل مع فريق المبيعات",
+    "nameLabel": "اسمك",
+    "namePlaceholder": "أدخل اسمك",
+    "nameRequired": "الاسم مطلوب",
+    "emailLabel": "بريدك الإلكتروني",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "البريد الإلكتروني غير صحيح",
+    "mobileLabel": "رقم الجوال",
+    "mobilePlaceholder": "أدخل رقم الجوال",
+    "mobileRequired": "رقم الجوال مطلوب",
+    "messageLabel": "رسالتك",
+    "messagePlaceholder": "أدخل رسالتك",
+    "messageRequired": "الرسالة مطلوبة",
+    "submitButton": "إرسال الرسالة",
+    "successTitle": "تمت العملية بنجاح",
+    "successDescription": "شكرا على رسالتكم",
+    "errorTitle": "حدث خطأ ما",
+    "errorDescription": "يرجى المحاولة مرة أخرى"
+  },
+  "contactInfo": {
+    "ourStore": "متجرنا",
+    "address": "2163 Phillips Gap Rd, West Jefferson, North Carolina, United States",
+    "phone": "الهاتف:",
+    "phoneNumber": "+1 666 8888",
+    "email": "البريد الإلكتروني:",
+    "emailAddress": "hi.avitex@gmail.com",
+    "openHours": "ساعات العمل",
+    "monFri": "الإثنين - الجمعة:",
+    "monFriTime": "7:30 صباحًا - 8:00 مساءً بتوقيت المحيط الهادئ",
+    "saturday": "السبت:",
+    "saturdayTime": "8:00 صباحًا - 6:00 مساءً بتوقيت المحيط الهادئ",
+    "sunday": "الأحد:",
+    "sundayTime": "9:00 صباحًا - 5:00 مساءً بتوقيت المحيط الهادئ"
+  },
+  "profileLayout": {
+    "dashboard": "لوحة القيادة",
+    "settings": "الاعدادات"
+  },
+  "rowStatus": {
+    "awaitingPickup": "في انتظار الاستلام",
+    "cancelledOrders": "الطلبات الملغاة",
+    "totalOrders": "إجمالي عدد الطلبات"
+  },
+  "orders": {
+    "recentOrders": "الطلبات الأخيرة",
+    "noOrders": "لا توجد طلبات متاحة.",
+    "order": "الطلب",
+    "products": "المنتجات",
+    "pricing": "التسعير",
+    "status": "الحالة",
+    "pending": "قيد الانتظار",
+    "delivery": "في التوصيل",
+    "completed": "مكتمل",
+    "canceled": "ملغى"
+  },
+  "formChangeUserInfo": {
+    "information": "المعلومات",
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "fullNameRequired": "الاسم الكامل مطلوب",
+    "fullNameMinLength": "يجب أن يكون الاسم على الأقل 3 أحرف",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "عنوان البريد الإلكتروني غير صحيح",
+    "mobile": "رقم الجوال",
+    "mobilePlaceholder": "أدخل رقم الجوال",
+    "mobileRequired": "رقم الجوال مطلوب",
+    "address": "العنوان",
+    "addressPlaceholder": "أدخل عنوانك",
+    "addressRequired": "العنوان مطلوب",
+    "addressMinLength": "يجب أن يكون العنوان على الأقل 5 أحرف",
+    "changePassword": "تغيير كلمة المرور",
+    "currentPassword": "كلمة المرور الحالية",
+    "currentPasswordPlaceholder": "أدخل كلمة المرور الحالية",
+    "currentPasswordRequired": "كلمة المرور الحالية مطلوبة",
+    "newPassword": "كلمة المرور الجديدة",
+    "newPasswordPlaceholder": "أدخل كلمة المرور الجديدة",
+    "newPasswordRequired": "كلمة المرور الجديدة مطلوبة",
+    "newPasswordMinLength": "يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+    "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+    "confirmNewPasswordPlaceholder": "أكد كلمة المرور الجديدة",
+    "confirmNewPasswordRequired": "تأكيد كلمة المرور الجديدة مطلوب",
+    "passwordsMismatch": "كلمات المرور غير متطابقة",
+    "updateInfo": "تحديث المعلومات",
+    "updateSuccess": "تم التحديث بنجاح",
+    "updateSuccessDescription": "تم تحديث المعلومات بنجاح",
+    "updateError": "حدث خطأ",
+    "updateErrorDescription": "حدث خطأ أثناء التحديث"
+  },
+  "mainSearch": {
+    "placeholder": "ستجد كل ما تريد لدينا",
+    "noResults": "لم يتم العثور على نتائج"
+
+  }
+}

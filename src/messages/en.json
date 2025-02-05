@@ -1,0 +1,202 @@
+{
+  "links": {
+    "login": "Login",
+    "aboutUs": "About us",
+    "products": "Products",
+    "contactUs": "Contact us"
+  },
+  "footer": {
+    "title": "Get to know Prime",
+    "description": "Prime Store is a specialized store for health products. We carefully select our products to be the best for the user. We are not only looking for a good price but also for quality, and we care about our customers' health and providing them with the best health products."
+  },
+  "footerLinks": {
+    "usefulLinks": "Useful Links",
+    "help": "Help",
+    "shippingPolicy": "Shipping Policy",
+    "returnPolicy": "Return Policy",
+    "refundPolicy": "Refund Policy",
+    "contactUs": "Contact Us"
+  },
+  "footerSocialMedia": {
+    "followUs": "Follow Us"
+  },
+  "footerSubscribe": {
+    "title": "Boost your sales with Prime... Sign up now",
+    "fullNamePlaceholder": "Full Name",
+    "fullNameRequired": "Full name is required",
+    "phoneNumberPlaceholder": "Phone Number",
+    "phoneNumberRequired": "Phone number is required",
+    "submitButton": "Submit Your Request Now"
+  },
+  "subscribeNow": {
+    "emailPlaceholder": "Enter your email to get updates",
+    "emailRequired": "Email is required",
+    "subscribeButton": "Subscribe Now",
+    "successTitle": "Subscription Successful",
+    "successMessage": "Thank you for subscribing!",
+    "errorTitle": "Subscription Failed",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "headers": {
+    "We_chose_for_you": "We chose for you",
+    "Select_category": "Select category",
+    "Today_offers": "Today offers",
+    "most_requested_products": "Most requested products",
+    "related_products": "Related products"
+  },
+  "haderPages": {
+    "Who_we_are": "Who we are",
+    "shopping_cart": "Shopping Cart",
+    "checkout": "checkout",
+    "contact_us": "Contact Us",
+    "profile": "Profile",
+    "Return_and_Exchange_Policy": "Return and Exchange Policy",
+    "product_details": "Product Details",
+    "product_list": "Product List",
+    "shipping_policy": "Shipping Policy",
+    "thank_you": "Thank you"
+  },
+  "listProductHeader": {
+    "storeName": "Prime Store"
+  },
+  "productFilter": {
+    "allProducts": "All Products"
+  },
+  "aboutUsSection": {
+    "title": "Our Story",
+    "description": "We believe in the power of nature to enhance your natural beauty. Our products are carefully crafted using the best organic ingredients."
+  },
+  "singleProductOverView": {
+    "reviews": "(1.234 reviews)",
+    "addToCart": "Add to cart",
+    "deliveryReturn": "Delivery & Return",
+    "askQuestion": "Ask A Question",
+    "estimatedDelivery": "Estimated Delivery:",
+    "itemsInStock": "items in stock",
+    "sku": "SKU:",
+    "categories": "Categories:",
+    "tag": "Tag:",
+    "getItToday": "Get it today",
+    "freeShipping": "Free shipping",
+    "freeShippingDescription": "Free shipping on orders over $75.",
+    "supportEveryday": "Support everyday",
+    "supportEverydayDescription": "Support from 8:30 AM to 10:00 PM everyday",
+    "dayReturns": "100 Day Returns",
+    "dayReturnsDescription": "Not impressed? Get a refund. You have 100 days to break our hearts."
+  },
+  "willLoveToo": {
+    "title": "You'll love this too"
+  },
+  "ourServers": {
+    "fasterShippingTitle": "Faster Shipping",
+    "fasterShippingDesc": "We provide fast and reliable shipping services to deliver your orders as quickly as possible.",
+    "cottonMaterialsTitle": "Cotton Materials",
+    "cottonMaterialsDesc": "Our products are made from high-quality cotton materials to provide comfort and elegance.",
+    "highQualityTitle": "High Quality",
+    "highQualityDesc": "We are committed to providing high-quality products that meet our customers' expectations.",
+    "highCompatibilityTitle": "High Compatibility",
+    "highCompatibilityDesc": "Our products are compatible with various daily uses and needs."
+  },
+  "aboutUsHeader": {
+    "title": "Welcome to Prime - Your Favorite E-Commerce Destination",
+    "description": "At Prime, we are committed to providing you with the best online shopping experience. We offer a wide range of high-quality products, from fashion and accessories to home goods and electronics. We focus on customer satisfaction and strive to provide a seamless shopping experience, ensuring you find what you need at competitive prices. Discover the convenience of shopping with Prime and make us your first choice for all your e-commerce needs."
+  },
+  "contactForm": {
+    "title": "Send us a message",
+    "subtitle": "Contact our sales team",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "nameRequired": "Name is required",
+    "emailLabel": "Your Email",
+    "emailPlaceholder": "Enter your email",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "mobileLabel": "Mobile Number",
+    "mobilePlaceholder": "Enter your mobile number",
+    "mobileRequired": "Mobile number is required",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "Enter your message",
+    "messageRequired": "Message is required",
+    "submitButton": "Send Message",
+    "successTitle": "Success",
+    "successDescription": "Thank you for your message",
+    "errorTitle": "Error",
+    "errorDescription": "Please try again"
+  },
+  "contactInfo": {
+    "ourStore": "Our Store",
+    "address": "2163 Phillips Gap Rd, West Jefferson, North Carolina, United States",
+    "phone": "Phone:",
+    "phoneNumber": "+1 666 8888",
+    "email": "Email:",
+    "emailAddress": "hi.avitex@gmail.com",
+    "openHours": "Open Hours",
+    "monFri": "Mon - Fri:",
+    "monFriTime": "7:30am - 8:00pm PST",
+    "saturday": "Saturday:",
+    "saturdayTime": "8:00am - 6:00pm PST",
+    "sunday": "Sunday:",
+    "sundayTime": "9:00am - 5:00pm PST"
+  },
+  "profileLayout": {
+    "dashboard": "Dashboard",
+    "settings": "Settings"
+  },
+  "rowStatus": {
+    "awaitingPickup": "Awaiting Pickup",
+    "cancelledOrders": "Cancelled Orders",
+    "totalOrders": "Total Number of Orders"
+  },
+  "orders": {
+    "recentOrders": "Recent Orders",
+    "noOrders": "No orders available.",
+    "order": "Order",
+    "products": "Products",
+    "pricing": "Pricing",
+    "status": "Status",
+    "pending": "Pending",
+    "delivery": "Delivery",
+    "completed": "Completed",
+    "canceled": "Canceled"
+  },
+  "formChangeUserInfo": {
+    "information": "Information",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "fullNameRequired": "Full name is required",
+    "fullNameMinLength": "Full name must be at least 3 characters",
+    "email": "Email",
+    "emailPlaceholder": "Enter your email",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "mobile": "Mobile Number",
+    "mobilePlaceholder": "Enter your mobile number",
+    "mobileRequired": "Mobile number is required",
+    "address": "Address",
+    "addressPlaceholder": "Enter your address",
+    "addressRequired": "Address is required",
+    "addressMinLength": "Address must be at least 5 characters",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "currentPasswordPlaceholder": "Enter your current password",
+    "currentPasswordRequired": "Current password is required",
+    "newPassword": "New Password",
+    "newPasswordPlaceholder": "Enter your new password",
+    "newPasswordRequired": "New password is required",
+    "newPasswordMinLength": "New password must be at least 6 characters",
+    "confirmNewPassword": "Confirm New Password",
+    "confirmNewPasswordPlaceholder": "Confirm your new password",
+    "confirmNewPasswordRequired": "Confirm new password is required",
+    "passwordsMismatch": "Passwords do not match",
+    "updateInfo": "Update Information",
+    "updateSuccess": "Updated successfully",
+    "updateSuccessDescription": "Information updated successfully",
+    "updateError": "Error",
+    "updateErrorDescription": "An error occurred while updating"
+  },
+  "mainSearch": {
+    "placeholder": "You will find everything you need here",
+    "noResults": "No results found"
+
+  }
+}
