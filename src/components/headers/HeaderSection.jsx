@@ -6,7 +6,7 @@ function HeaderSection({ title }) {
 
   return (
     <div>
-      <h4 className="text-2xl md:text-3xl text-bsMainPuple font-bold">
+      <h4 className="text-2xl md:text-3xl text-bsMainGreen font-bold">
         {t(title)}
       </h4>
     </div>

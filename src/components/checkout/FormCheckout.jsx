@@ -50,7 +50,7 @@ function FormCheckout() {
   const onSubmit = (data) => {
     axios
       .post(
-        "http://162.240.24.203/~primestore/api/website/orders/create",
+        "https://perfect-teamwork.com/primesbackend/api/website/orders/create",
         {
           customer: {
             customer_name: data?.fullName,

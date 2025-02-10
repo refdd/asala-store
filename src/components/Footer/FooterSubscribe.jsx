@@ -27,7 +27,7 @@ function FooterSubscribe() {
             <Input
               type="text"
               placeholder={t("fullNamePlaceholder")}
-              className="placeholder:text-white py-6 rounded-2xl text-white"
+              className=" bg-[#ffffff94] py-6 rounded-2xl text-bsMainBrown placeholder:text-bsMainBrown"
               {...register("fullName", { required: t("fullNameRequired") })}
             />
             {errors.fullName && (
@@ -40,7 +40,7 @@ function FooterSubscribe() {
             <Input
               type="number"
               placeholder={t("phoneNumberPlaceholder")}
-              className="placeholder:text-white py-6 rounded-2xl text-white"
+              className="bg-[#ffffff94] py-6 rounded-2xl text-bsMainBrown placeholder:text-bsMainBrown"
               {...register("phoneNumber", {
                 required: t("phoneNumberRequired"),
               })}
@@ -54,7 +54,7 @@ function FooterSubscribe() {
           <div className="flex items-center justify-end">
             <button
               type="submit"
-              className="bg-bsMainPuple text-white border border-white rounded-2xl px-4 py-2"
+              className="bg-[#ffffff94] text-bsMainBrown border border-white rounded-2xl px-4 py-2"
             >
               {t("submitButton")}
             </button>

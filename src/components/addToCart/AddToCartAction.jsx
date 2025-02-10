@@ -15,6 +15,8 @@ function AddToCartAction({ productId, quantity }) {
   const router = useRouter();
   const { data: session } = useSession();
   const locale = useLocale();
+  console.log(session);
+
   const handleAddToCart = async () => {
     if (!session) {
       // Redirect to the login page if not authenticated
@@ -39,7 +41,7 @@ function AddToCartAction({ productId, quantity }) {
 
   return (
     <button onClick={handleAddToCart}>
-      <MdAddShoppingCart className="text-3xl text-bsMainPuple cursor-pointer" />
+      <MdAddShoppingCart className="text-3xl text-[#82D627C9] cursor-pointer" />
     </button>
   );
 }

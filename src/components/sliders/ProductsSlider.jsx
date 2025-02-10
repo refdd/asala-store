@@ -7,69 +7,69 @@ import {
 } from "@/components/ui/carousel";
 import CardProduct from "../cards/CardProduct";
 
-// Dummy product data
-const dummyProducts = [
+// Updated product data from the image
+const productsFromImage = [
   {
     id: 1,
-    title: "Premium Leather Jacket",
-    desc: "Stay stylish and warm with this high-quality leather jacket. Perfect for any occasion.",
-    rate: 3,
-    price: "19",
-    image: "/assets/images/product1.jpg",
+    title: "مربى التوت",
+    price: "5000",
+    offer: 30,
+    image: "/assets/images/image 1.png",
   },
   {
     id: 2,
-    title: "Wireless Noise-Cancelling Headphones",
-    desc: "Immerse yourself in music with these top-rated wireless headphones featuring noise-cancellation technology.",
-    rate: 3,
-    price: "29",
-    image: "/assets/images/product (1).jpg",
+    title: "مربى الثين",
+    price: "5000",
+    offer: 30,
+    image: "/assets/images/image 2.png",
   },
   {
     id: 3,
-    title: "Smart Home Security Camera",
-    desc: "Keep your home safe with this smart security camera that offers 24/7 monitoring and real-time alerts.",
-    rate: 4,
-    price: "39",
-    image: "/assets/images/product (1).jpg",
+    title: "مربى الفريز",
+    price: "5000",
+    offer: 30,
+    image: "/assets/images/image 2.png",
   },
   {
     id: 4,
-    title: "Organic Green Tea Pack",
-    desc: "Enjoy the health benefits of organic green tea with this premium pack of 50 tea bags.",
-    rate: 1,
-    price: "49",
-    image: "/assets/images/product (2).jpg",
+    title: "قنع مجفف",
+    price: "5000",
+    offer: 30,
+    image: "/assets/images/image 4.png",
   },
   {
     id: 5,
-    title: "Yoga Mat with Carry Strap",
-    desc: "Practice yoga comfortably with this eco-friendly, non-slip yoga mat that comes with a convenient carry strap.",
-    rate: 4,
-    price: "59",
-    image: "/assets/images/product (3).jpg",
+    title: "خوسا محفورة ومجففة",
+    price: "5000",
+    offer: 30,
+    image: "/assets/images/image 1.png",
+  },
+  {
+    id: 6,
+    title: "باذنجان محفور ومجفف",
+    price: "5000",
+    offer: 30,
+    image: "/assets/images/image 1.png",
   },
 ];
 
-function ProductsSlider({ products, related_products }) {
+function ProductsSlider({ related_products }) {
   return (
-    <div className="">
+    <div className="block md:hidden">
       <Carousel>
         <CarouselContent className="py-7 px-2 md:px-0">
-          {products?.map((product) => (
+          {productsFromImage.map((product) => (
             <CarouselItem
               key={product.id}
               className="md:basis-1/2 lg:basis-1/4 pl-2 md:pl-6"
             >
               <CardProduct
-                title={product.name}
-                desc={product.details?.summaryDetails}
-                rate={product.stars}
+                title={product.title}
                 price={product.price}
                 image={product.image}
-                discount={product.discount}
                 slug={product.id}
                 related_products={related_products}
+                offer={product.offer}
               />
             </CarouselItem>
           ))}

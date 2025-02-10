@@ -6,8 +6,10 @@ import { Button } from "../ui/button";
 import { signupAction } from "@/app/actions";
 import { useRouter } from "@/i18n/routing";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslations } from "next-intl";
 
 function SignupForm() {
+  const t = useTranslations("signupForm");
   const methods = useForm();
   const router = useRouter();
   const { toast } = useToast();
@@ -32,7 +34,7 @@ function SignupForm() {
     }
     if (result?.error) {
       toast({
-        title: "خطأ",
+        title: t("errorTitle"),
         description: result.error,
         variant: "destructive",
       });
@@ -48,88 +50,84 @@ function SignupForm() {
         >
           {/* Name Field */}
           <CustomInput
-            label="الاسم الكامل"
+            label={t("nameLabel")}
             name="name"
             register={register}
             className="placeholder:text-black"
             errors={errors}
             validationRules={{
-              required: "الاسم الكامل مطلوب",
+              required: t("nameRequired"),
               minLength: {
                 value: 3,
-                message: "يجب أن يكون الاسم على الأقل 3 أحرف",
+                message: t("nameMinLength"),
               },
             }}
-            placeholder="أدخل اسمك الكامل"
+            placeholder={t("namePlaceholder")}
           />
           {/* Email Field */}
           <CustomInput
-            label="البريد الإلكتروني"
+            label={t("emailLabel")}
             name="email"
             register={register}
             errors={errors}
             className="placeholder:text-black"
             validationRules={{
-              required: "البريد الإلكتروني مطلوب",
+              required: t("emailRequired"),
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                message: "عنوان البريد الإلكتروني غير صحيح",
+                message: t("emailInvalid"),
               },
             }}
-            placeholder="أدخل بريدك الإلكتروني"
+            placeholder={t("emailPlaceholder")}
           />
           {/* Password Field */}
           <CustomInput
-            label="كلمة المرور"
+            label={t("passwordLabel")}
             name="password"
             type="password"
             register={register}
             errors={errors}
             className="placeholder:text-black"
             validationRules={{
-              required: "كلمة المرور مطلوبة",
+              required: t("passwordRequired"),
               minLength: {
                 value: 6,
-                message: "يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+                message: t("passwordMinLength"),
               },
             }}
-            placeholder="أدخل كلمة المرور"
+            placeholder={t("passwordPlaceholder")}
           />
           {/* Mobile Field */}
           <CustomInput
-            label="رقم الجوال"
+            label={t("mobileLabel")}
             name="mobile"
             register={register}
             errors={errors}
             className="placeholder:text-black"
             validationRules={{
-              required: "رقم الجوال مطلوب",
-              // pattern: {
-              //   value: /^[0-9]{12}$/,
-              //   message: "رقم الجوال غير صحيح",
-              // },
+              required: t("mobileRequired"),
             }}
-            placeholder="أدخل رقم الجوال"
+            placeholder={t("mobilePlaceholder")}
           />
           {/* Address Field */}
           <CustomInput
-            label="العنوان"
+            label={t("addressLabel")}
             name="address"
             register={register}
             errors={errors}
             className="placeholder:text-black"
             validationRules={{
-              required: "العنوان مطلوب",
+              required: t("addressRequired"),
               minLength: {
                 value: 5,
-                message: "يجب أن يكون العنوان على الأقل 5 أحرف",
+                message: t("addressMinLength"),
               },
             }}
-            placeholder="أدخل عنوانك"
+            placeholder={t("addressPlaceholder")}
           />
           {/* Submit Button */}
           <Button className="bg-bsMainPuple hover:bg-bsPurple text-white">
-            إرسال
+            {t("submit")}
           </Button>
         </form>
       </FormProvider>

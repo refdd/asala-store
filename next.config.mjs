@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "http",
         hostname: "162.240.24.203",
       },
+      {
+        protocol: "https",
+        hostname: "perfect-teamwork.com",
+      },
     ],
   },
 };

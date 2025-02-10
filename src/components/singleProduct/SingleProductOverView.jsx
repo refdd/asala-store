@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { MdAssignmentReturn, MdSupportAgent } from "react-icons/md";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import SingleProductAddTOCart from "./SingleProductAddTOCart";
 
 function SingleProductOverView({
   title,
@@ -17,6 +18,7 @@ function SingleProductOverView({
   price,
   discountedPrice,
   locale,
+  productId,
 }) {
   const t = useTranslations("singleProductOverView"); // Fetch translations
 
@@ -54,14 +56,8 @@ function SingleProductOverView({
         <div className="text-2xl text-bsMainPuple font-semibold">${price}</div>
         <div className="w-px h-4 bg-line"></div>
       </div>
-      <div className="font-medium text-gray-500 text-black mt-3">
-        {description}
-      </div>
-      <div className="choose-quantity flex items-center max-xl:flex-wrap lg:justify-between gap-5 mt-4">
-        <Button className="bg-bsMainPuple w-full md:w-[300px] hover:bg-bsPurple text-white font-semibold py-2 px-4 rounded">
-          <span>{t("addToCart")}</span>
-        </Button>
-      </div>
+      <div className="font-medium  text-black mt-3">{description}</div>
+      <SingleProductAddTOCart t={t} productId={productId} quantity={1} />
       <div className="more-infor mt-6">
         <div className="flex items-center gap-4 flex-wrap">
           <div className="flex items-center gap-1">

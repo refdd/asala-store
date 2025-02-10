@@ -1,10 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+import { Popover, PopoverTrigger } from "@/components/ui/popover";
 import { User, LogOut } from "lucide-react";
 import { Link } from "@/i18n/routing";
 import { useSession, signOut } from "next-auth/react";
@@ -26,37 +21,44 @@ function ProfilNavIcon({ userData }) {
         <PopoverTrigger asChild>
           {/* Display user image or default icon */}
           {userData ? (
-            userData.image ? (
-              <div className="w-6 h-6 rounded-full overflow-hidden cursor-pointer">
-                <Image
-                  src={userData.image}
-                  alt={userData.name || "User"}
-                  width={32}
-                  height={32}
-                  className="object-cover"
-                />
+            <Link href={"/dashboard/profile"}>
+              <div className="">
+                {userData.image ? (
+                  <div className="w-6 h-6 rounded-full overflow-hidden cursor-pointer">
+                    <Image
+                      src={userData.image}
+                      alt={userData.name || "User"}
+                      width={32}
+                      height={32}
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center cursor-pointer">
+                    <User className="w-4 h-4 text-gray-600" />
+                  </div>
+                )}
               </div>
-            ) : (
-              <div className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center cursor-pointer">
-                <User className="w-4 h-4 text-gray-600" />
-              </div>
-            )
+            </Link>
           ) : (
-            <User className="w-6 h-6 text-white cursor-pointer" />
+            <Link href={"/auth/login"}>
+              <User
+                className="w-6 h-6 text-white cursor-pointer"
+                onClick={() => {}}
+              />
+            </Link>
           )}
         </PopoverTrigger>
-        <PopoverContent className="w-40">
+        {/* <PopoverContent className="w-40">
           <div className="grid gap-4">
             <div className="grid gap-2">
               <div className="grid grid-cols-1 items-center gap-4">
-                {/* Display user name if authenticated */}
                 {userData && (
                   <div className="text-sm font-medium text-center">
                     {userData.name || "User"}
                   </div>
                 )}
 
-                {/* Profile and Logout buttons */}
                 {userData ? (
                   <>
                     <Link href={"/dashboard/profile"}>
@@ -92,7 +94,7 @@ function ProfilNavIcon({ userData }) {
               </div>
             </div>
           </div>
-        </PopoverContent>
+        </PopoverContent> */}
       </Popover>
     </div>
   );

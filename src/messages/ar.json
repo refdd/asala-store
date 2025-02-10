@@ -21,7 +21,7 @@
     "followUs": "للمتابعة"
   },
   "footerSubscribe": {
-    "title": "لتزيد مبيعاتك عبر برايم... سجل الأن",
+    "title": "للتواصل معنا ",
     "fullNamePlaceholder": "الاسم الكامل",
     "fullNameRequired": "الاسم الكامل مطلوب",
     "phoneNumberPlaceholder": "رقم الهاتف",
@@ -42,7 +42,8 @@
     "Select_category": " اختر التصنيف",
     "Today_offers": "عروض اليوم",
     "most_requested_products": "المنتجات الأكثر طلباً",
-    "related_products": "منتجات ذات صلة"
+    "related_products": "منتجات ذات صلة",
+    "most_viewed": " الأكثر مشاهدة"
   },
   "haderPages": {
     "Who_we_are": "من نحن",
@@ -198,5 +199,64 @@
     "placeholder": "ستجد كل ما تريد لدينا",
     "noResults": "لم يتم العثور على نتائج"
 
+  },
+  "loginForm": {
+    "mobileLabel": "رقم الجوال",
+    "mobilePlaceholder": "أدخل رقم الجوال",
+    "mobileRequired": "رقم الجوال مطلوب",
+    "passwordLabel": "كلمة المرور",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "passwordMinLength": "يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+    "submitButton": "إرسال",
+    "errorTitle": "خطأ",
+    "errorDescription": "حدث خطأ أثناء تسجيل الدخول"
+  },
+  "headerFrom": {
+    "welcomeMessage": "مرحبا بك !!!",
+    "loginTitle": "تسجيل الدخول"
+  },
+  "headerForm": {
+    "noAccount": "ليس لديك حساب؟",
+    "signup": "انشاء حساب"
+  },
+  "signupForm": {
+    "nameLabel": "الاسم الكامل",
+    "nameRequired": "الاسم الكامل مطلوب",
+    "nameMinLength": "يجب أن يكون الاسم على الأقل 3 أحرف",
+    "namePlaceholder": "أدخل اسمك الكامل",
+
+    "emailLabel": "البريد الإلكتروني",
+    "emailRequired": "البريد الإلكتروني مطلوب",
+    "emailInvalid": "عنوان البريد الإلكتروني غير صحيح",
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+
+    "passwordLabel": "كلمة المرور",
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "passwordMinLength": "يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+    "passwordPlaceholder": "أدخل كلمة المرور",
+
+    "mobileLabel": "رقم الجوال",
+    "mobileRequired": "رقم الجوال مطلوب",
+    "mobilePlaceholder": "أدخل رقم الجوال",
+
+    "addressLabel": "العنوان",
+    "addressRequired": "العنوان مطلوب",
+    "addressMinLength": "يجب أن يكون العنوان على الأقل 5 أحرف",
+    "addressPlaceholder": "أدخل عنوانك",
+
+    "submit": "إرسال",
+    "errorTitle": "خطأ"
+  },
+  "auth": {
+    "haveAccount": "لديك حساب؟",
+    "login": "تسجيل الدخول"
+  },
+  "buttonOrder": {
+    "orderNow": "اطلب الآن",
+    "seeMore": "شاهد المزيد"
+  },
+  "product": {
+    "quickView": "نظرة سريعة"
   }
 }

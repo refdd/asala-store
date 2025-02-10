@@ -4,7 +4,7 @@ import LinksNav from "./LinksNav";
 
 function NavLinks({ userData }) {
   return (
-    <div className="flex items-center gap-3  justify-end">
+    <div className="flex items-center gap-2  justify-end">
       <LinksNav userData={userData} />
       <UserIcons userData={userData} />
     </div>

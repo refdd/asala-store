@@ -24,7 +24,7 @@ function ContactForm() {
   const onSubmit = async (data) => {
     axios
       .post(
-        `http://162.240.24.203/~primestore/api/website/contact-us`,
+        `https://perfect-teamwork.com/primesbackend/api/website/contact-us`,
         {
           name: data.name,
           mobile: data.mobile,

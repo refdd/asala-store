@@ -5,18 +5,14 @@ import React from "react";
 
 function LogoNav({ navbar }) {
   return (
-    <div className="relative w-full z-10">
-      <div
-        className={`${
-          navbar ? "block" : "top-[-18px] md:absolute left-0 "
-        }   w-full `}
-      >
+    <div className="relative w-full z-50 flex items-center justify-center">
+      <div className={`${navbar ? "block" : "top-[-18px] left-0 "}   w-full  `}>
         <Link href={`/`}>
           <div
             className={`relative  ${
               navbar
-                ? "w-full h-[50px] md:h-[55px]  md:w-[125px]"
-                : "w-full h-[50px] md:h-[90px]  md:w-[125px]"
+                ? "w-full h-[50px] md:h-[68px]  md:w-full "
+                : "w-full h-[50px] md:h-[68px]  md:w-[125px]"
             }  `}
           >
             <Image
@@ -27,7 +23,7 @@ function LogoNav({ navbar }) {
               priority={true}
               // placeholder="blur"
               // blurDataURL={logo}
-              className=""
+              className="z-30 object-contain"
             />
           </div>
         </Link>

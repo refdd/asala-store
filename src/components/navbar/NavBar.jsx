@@ -49,14 +49,14 @@ function NavBar({ userData }) {
     <div
       dir={locale === "ar" ? "ltr" : "rtl"}
       className={`${
-        navbar ? "fixed bg-bsMainPuple py-1" : "fixed pt-5"
-      }  top-0 z-50 w-full `}
+        navbar ? "fixed bg-bsMainBrown py-1" : "fixed "
+      }  top-0 z-50 w-full py-1  `}
     >
       <div className=" 2xl:container md:px-10 mx-auto px-4 relative">
         <div className="grid grid-cols-2 lg:grid-cols-8 gap-3 items-center ">
           <LogoNav navbar={navbar} />
           <div className="col-span-4 hidden md:block">
-            <MainSearch />
+            <MainSearch navbar={navbar} />
           </div>
           <div className=" md:hidden flex items-center justify-end gap-4">
             <CartNavIcon />
@@ -75,6 +75,9 @@ function NavBar({ userData }) {
           handleCloseMenu={handleCloseMenu}
         /> */}
       </div>
+      {!navbar && (
+        <div className="absolute w-[240px]  h-full top-0 -left-14 bg-[#FFFFFFBF] rounded-r-[30px] z-10" />
+      )}
     </div>
   );
 }

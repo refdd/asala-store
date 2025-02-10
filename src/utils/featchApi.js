@@ -1,4 +1,4 @@
-export const baseUrl = "http://162.240.24.203/~primestore/api";
+export const baseUrl = "https://perfect-teamwork.com/primesbackend/api";
 
 // Helper function to get language from localStorage safely
 // function getLanguage() {

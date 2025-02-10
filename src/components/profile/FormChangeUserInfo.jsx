@@ -15,6 +15,7 @@ function FormChangeUserInfo() {
   const locale = useLocale();
   const { toast } = useToast();
   const [isUpdated, setIsUpdated] = useState(false);
+  const [isChangingPassword, setIsChangingPassword] = useState(false); // Track if user is changing password
   const t = useTranslations("formChangeUserInfo"); // Fetch translations
 
   const methods = useForm({
@@ -23,6 +24,9 @@ function FormChangeUserInfo() {
       email: session?.user?.email || "",
       mobile: session?.user?.mobile || "",
       address: session?.user?.address || t("addressPlaceholder"),
+      currentPassword: "",
+      newPassword: "",
+      confirmNewPassword: "",
     },
   });
 
@@ -44,19 +48,36 @@ function FormChangeUserInfo() {
     }
   }, [session, setValue, t]);
 
+  const newPassword = watch("newPassword");
+
+  useEffect(() => {
+    // If the user starts typing in the new password field, set isChangingPassword to true
+    if (newPassword) {
+      setIsChangingPassword(true);
+    } else {
+      setIsChangingPassword(false);
+    }
+  }, [newPassword]);
+
   const onSubmit = async (data) => {
     try {
+      const payload = {
+        name: data.name,
+        mobile: data.mobile,
+        email: data.email,
+        address: data.address,
+      };
+
+      // Only include password fields if the user is changing the password
+      if (isChangingPassword) {
+        payload.oldpassword = data.currentPassword;
+        payload.newpassword = data.newPassword;
+        payload.confirmpassword = data.confirmNewPassword;
+      }
+
       const res = await axios.post(
-        `http://162.240.24.203/~primestore/api/website/profile/updateProfile`,
-        {
-          name: data.name,
-          mobile: data.mobile,
-          email: data.email,
-          address: data.address,
-          oldpassword: data.currentPassword,
-          newpassword: data.newPassword,
-          confirmpassword: data.confirmNewPassword,
-        },
+        `https://perfect-teamwork.com/primesbackend/api/website/profile/updateProfile`,
+        payload,
         {
           headers: {
             "Content-Type": "application/json",
@@ -94,8 +115,6 @@ function FormChangeUserInfo() {
       });
     }
   };
-
-  const newPassword = watch("newPassword");
 
   return (
     <div className="">
@@ -173,7 +192,9 @@ function FormChangeUserInfo() {
             register={register}
             errors={errors}
             validationRules={{
-              required: t("currentPasswordRequired"),
+              required: isChangingPassword
+                ? t("currentPasswordRequired")
+                : false,
             }}
             placeholder={t("currentPasswordPlaceholder")}
           />
@@ -185,7 +206,7 @@ function FormChangeUserInfo() {
             register={register}
             errors={errors}
             validationRules={{
-              required: t("newPasswordRequired"),
+              required: isChangingPassword ? t("newPasswordRequired") : false,
               minLength: {
                 value: 6,
                 message: t("newPasswordMinLength"),
@@ -201,9 +222,13 @@ function FormChangeUserInfo() {
             register={register}
             errors={errors}
             validationRules={{
-              required: t("confirmNewPasswordRequired"),
+              required: isChangingPassword
+                ? t("confirmNewPasswordRequired")
+                : false,
               validate: (value) =>
-                value === newPassword || t("passwordsMismatch"),
+                !isChangingPassword ||
+                value === newPassword ||
+                t("passwordsMismatch"),
             }}
             placeholder={t("confirmNewPasswordPlaceholder")}
           />

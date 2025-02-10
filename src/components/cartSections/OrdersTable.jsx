@@ -20,7 +20,7 @@ function OrdersTable() {
     debounce(async (newQuantity, product_id) => {
       try {
         await axios.post(
-          `http://162.240.24.203/~primestore/api/website/add-to-cart`,
+          `https://perfect-teamwork.com/primesbackend/api/website/add-to-cart`,
           {
             product_id: product_id,
             quantity: newQuantity,
@@ -53,7 +53,7 @@ function OrdersTable() {
     console.log("Remove", cartId);
     axios
       .post(
-        "http://162.240.24.203/~primestore/api/website/remove-cart",
+        "https://perfect-teamwork.com/primesbackend/api/website/remove-cart",
         { cart_id: cartId },
         {
           headers: {

@@ -7,7 +7,7 @@ export async function loginAction(formData) {
   const password = formData.get("password");
   try {
     const apiResponse = await fetch(
-      "http://162.240.24.203/~primestore/api/login",
+      "https://perfect-teamwork.com/primesbackend/api/login",
       {
         method: "POST",
         headers: {
@@ -58,7 +58,8 @@ export async function signupAction(formData) {
   const address = formData.get("address");
 
   try {
-    const apiUrl = "http://162.240.24.203/~primestore/api/website/register";
+    const apiUrl =
+      "https://perfect-teamwork.com/primesbackend/api/website/register";
     const apiResponse = await fetch(apiUrl, {
       method: "POST",
       headers: {

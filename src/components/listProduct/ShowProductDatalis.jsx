@@ -11,13 +11,14 @@ import ProductDetails from "./ProductDetails";
 import { useEffect, useState } from "react";
 import axios from "axios"; // Import axios
 import { baseUrl } from "@/utils/featchApi";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function ShowProductDatalis({ slug }) {
   const [productId, setProductId] = useState(null);
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const locale = useLocale();
+  const t = useTranslations("product");
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -50,12 +51,12 @@ export default function ShowProductDatalis({ slug }) {
           onClick={() => setProductId(slug)}
           className="px-7 py-3 rounded-xl bg-[#E4A4FB80] border border-white text-white"
         >
-          نظرة سريعة
+          {t("quickView")}
         </button>
       </SheetTrigger>
       <SheetContent side={"right"} className="w-[90%] md:max-w-4xl">
         <SheetHeader className={""}>
-          <SheetTitle>نظرة سريعة</SheetTitle>
+          <SheetTitle>{t("quickView")}</SheetTitle>
         </SheetHeader>
         {loading ? (
           <div className="w-full h-full flex justify-center items-center">

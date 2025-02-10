@@ -13,6 +13,9 @@ export default {
       },
       colors: {
         bsMainPuple: "#8B4AA3",
+        bsMainGreen: "#3C5C2B",
+        bsMainRed: "#FF0000",
+        bsMainBrown: "#CBA661",
         bsSecondPupl: "#e4a4fb",
         bsPurple: "#6f42c1",
         background: "hsl(var(--background))",

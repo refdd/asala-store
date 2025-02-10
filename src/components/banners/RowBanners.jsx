@@ -1,7 +1,11 @@
+"use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 function RowBanners({ image_offer }) {
+  const t = useTranslations("buttonOrder");
+
   return (
     <div className=" py-5 relative  ">
       <div className="container mx-auto px-4">
@@ -23,7 +27,7 @@ function RowBanners({ image_offer }) {
         <div className="absolute top-[83%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center z-30 ">
           <button className="px-7 py-3 rounded-xl bg-[#E4A4FB80]   text-white">
             {" "}
-            Order Now
+            {t("orderNow")}
           </button>
         </div>
         {/* content */}

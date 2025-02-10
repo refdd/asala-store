@@ -20,7 +20,7 @@ function SubscribeNow() {
   const onSubmit = (data) => {
     axios
       .post(
-        `http://162.240.24.203/~primestore/api/website/subscribes`,
+        `https://perfect-teamwork.com/primesbackend/api/website/subscribes`,
         {
           email: data.email,
         },

@@ -21,7 +21,7 @@ export const {
       async authorize(credentials) {
         try {
           const res = await fetch(
-            "http://162.240.24.203/~primestore/api/login",
+            "https://perfect-teamwork.com/primesbackend/api/login",
             {
               method: "POST",
               headers: {

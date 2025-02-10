@@ -2,23 +2,23 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import MainSliderContent from "../contentText/MainSliderContent";
+import NavigationDots from "./NavigationDots";
 
 const sliderData = [
   {
-    image: "/assets/images/banner.png",
-    title: "كريم شان 1",
-    description:
-      "العرض المميز اليوم من كريم شان بخصم 30% الواقي الشمسي الالماني",
+    image: "/assets/images/panner1.png",
+    name: "كريم شان 1",
+    detail: "العرض المميز اليوم من كريم شان بخصم 30% الواقي الشمسي الالماني",
   },
   {
-    image: "/assets/images/banner.png",
-    title: "كريم شان 2",
-    description: "عرض خاص على كريم شان الجديد بخصم 20%",
+    image: "/assets/images/panner1.png",
+    name: "كريم شان 2",
+    detail: "عرض خاص على كريم شان الجديد بخصم 20%",
   },
   {
-    image: "/assets/images/banner.png",
-    title: "كريم شان 3",
-    description: "خصم 25% على جميع منتجات كريم شان",
+    image: "/assets/images/panner1.png",
+    name: "كريم شان 3",
+    detail: "خصم 25% على جميع منتجات كريم شان",
   },
 ];
 
@@ -31,49 +31,37 @@ function MainSlider({ sliders }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliders.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Image */}
-        <div className="flex items-center justify-center">
-          <div className="relative w-full h-[260px] md:h-[380px] md:w-[400px] z-20">
-            <Image
-              alt={"Slider Image"}
-              title={"Slider Image"}
-              src={sliders[currentSlide].image}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw"
-              priority
-              className="object-cover "
-            />
-          </div>
-        </div>
+    <div
+      style={{ backgroundImage: `url(${sliderData[currentSlide].image})` }}
+      className="py-[100px] relative md:py-0 md:min-h-[calc(100vh-3rem-3rem)] flex items-center bg-no-repeat bg-center bg-cover"
+    >
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+          {/* Image */}
+          <div className="md:col-span-3"></div>
 
-        {/* Content */}
-        <MainSliderContent
-          title={sliders[currentSlide].name}
-          description={sliders[currentSlide].detail}
-        />
-
-        {/* Navigation Dots */}
-        <div className="flex justify-center gap-2 mt-4 md:col-span-2 md:justify-end">
-          {sliders.map((slide, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-3 h-3 rounded-full ${
-                currentSlide === index ? "bg-bsMainPuple" : "bg-gray-300"
-              }`}
-            />
-          ))}
+          {/* Content */}
+          <MainSliderContent
+            title={sliderData[currentSlide].name}
+            // description={sliderData[currentSlide].detail}
+            description={sliderData[currentSlide].detail}
+            link={sliderData[currentSlide].link}
+          />
         </div>
       </div>
+      {/* Navigation Dots */}
+      <NavigationDots
+        sliderData={sliderData}
+        handleDotClick={handleDotClick}
+        currentSlide={currentSlide}
+      />
     </div>
   );
 }

@@ -21,7 +21,7 @@
     "followUs": "Follow Us"
   },
   "footerSubscribe": {
-    "title": "Boost your sales with Prime... Sign up now",
+    "title": "Contact Us",
     "fullNamePlaceholder": "Full Name",
     "fullNameRequired": "Full name is required",
     "phoneNumberPlaceholder": "Phone Number",
@@ -42,7 +42,8 @@
     "Select_category": "Select category",
     "Today_offers": "Today offers",
     "most_requested_products": "Most requested products",
-    "related_products": "Related products"
+    "related_products": "Related products",
+    "most_viewed" : "Most viewed products"
   },
   "haderPages": {
     "Who_we_are": "Who we are",
@@ -198,5 +199,65 @@
     "placeholder": "You will find everything you need here",
     "noResults": "No results found"
 
+  },
+  "loginForm": {
+    "mobileLabel": "Mobile Number",
+    "mobilePlaceholder": "Enter your mobile number",
+    "mobileRequired": "Mobile number is required",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordRequired": "Password is required",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "submitButton": "Submit",
+    "errorTitle": "Error",
+    "errorDescription": "An error occurred during login"
+  },
+  "headerFrom": {
+    "welcomeMessage": "Welcome!",
+    "loginTitle": "Login"
+  },
+  "headerForm": {
+    "noAccount": "Don't have an account?",
+    "signup": "Sign up"
+  },
+  "signupForm": {
+    "nameLabel": "Full Name",
+    "nameRequired": "Full name is required",
+    "nameMinLength": "Name must be at least 3 characters",
+    "namePlaceholder": "Enter your full name",
+
+    "emailLabel": "Email",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "emailPlaceholder": "Enter your email",
+
+    "passwordLabel": "Password",
+    "passwordRequired": "Password is required",
+    "passwordMinLength": "Password must be at least 6 characters",
+    "passwordPlaceholder": "Enter password",
+
+    "mobileLabel": "Mobile Number",
+    "mobileRequired": "Mobile number is required",
+    "mobilePlaceholder": "Enter your mobile number",
+
+    "addressLabel": "Address",
+    "addressRequired": "Address is required",
+    "addressMinLength": "Address must be at least 5 characters",
+    "addressPlaceholder": "Enter your address",
+
+    "submit": "Submit",
+    "errorTitle": "Error"
+  },
+  "auth": {
+    "haveAccount": "Already have an account?",
+    "login": "Log in"
+  },
+  "buttonOrder": {
+    "orderNow": "Order Now",
+    "seeMore": "See More"
+  },
+  "product": {
+    "quickView": "Quick View"
   }
+ 
 }

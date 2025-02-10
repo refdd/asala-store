@@ -7,7 +7,7 @@ import axios from "axios";
 import { baseUrl } from "@/utils/featchApi";
 import { debounce } from "@/utils/debounce";
 
-function MainSearch() {
+function MainSearch({ navbar }) {
   const [searchTerm, setSearchTerm] = useState("");
   const t = useTranslations("mainSearch");
   const [products, setProducts] = useState([]);
@@ -64,13 +64,10 @@ function MainSearch() {
         placeholder={t("placeholder")} // Translated placeholder
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="h-[44px] px-[22px] w-full rounded-[15px] opacity-50 border text-bsMainPuple border-bsMainPuple placeholder:text-bsMainPuple placeholder:font-semibold focus:outline-none focus:border-blue-500 pl-12"
+        className={` ${
+          navbar && "border border-white"
+        } h-[44px] px-[22px] w-full rounded-[15px] bg-[#cba6619e]  text-white  placeholder:text-white placeholder:font-semibold focus:outline-none  pl-4`}
       />
-      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-        <Link href={"/listProduct"}>
-          <Search className="h-8 w-8 text-bsMainPuple" />
-        </Link>
-      </div>
       {isDropdownOpen &&
         searchTerm && ( // Only show dropdown if open and searchTerm is not empty
           <div className="absolute z-10 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg">

@@ -49,6 +49,7 @@ async function ProductDetails({ params }) {
               price={product?.data?.price}
               discountedPrice={product?.data?.discountedPrice}
               locale={locale}
+              productId={product?.data?.id}
             />
             <Willlovetoo locale={locale} />
           </div>

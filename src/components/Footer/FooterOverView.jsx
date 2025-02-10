@@ -2,6 +2,7 @@
 import React from "react";
 import DwonloadApp from "./DwonloadApp";
 import { useLocale, useTranslations } from "next-intl";
+import FooterSocialMedia from "./FooterSocialMedia";
 
 function FooterOverView() {
   const locale = useLocale();
@@ -13,11 +14,12 @@ function FooterOverView() {
     >
       <div className="flex flex-col gap-3">
         <span className="text-lg text-white font-bold">{t("title")}</span>
-        <p className="text-white text-sm font-bold md:leading-7">
+        <p className="text-white text-sm font-bold md:leading-6">
           {t("description")}
         </p>
       </div>
-      <DwonloadApp />
+      {/* <DwonloadApp /> */}
+      <FooterSocialMedia />
     </div>
   );
 }

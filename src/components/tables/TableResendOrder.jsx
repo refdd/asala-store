@@ -11,7 +11,7 @@ import { useTranslations } from "next-intl";
 
 const getStatusColor = (status) => {
   switch (status) {
-    case "Pending":
+    case "New":
       return "text-yellow-600 bg-yellow-100";
     case "Delivery":
       return "text-blue-600 bg-blue-100";
@@ -85,7 +85,7 @@ export function TableResendOrder({ ordersUser }) {
                     order.status
                   )}`}
                 >
-                  {t(order.status.toLowerCase())}
+                  {order?.status}
                 </span>
               </TableCell>
             </TableRow>

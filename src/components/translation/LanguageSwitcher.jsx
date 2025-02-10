@@ -1,65 +1,59 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { Globe } from "lucide-react";
-import TranslatedTypography from "../translation/TranslatedTypography";
-import { Link, usePathname } from "@/i18n/routing"; // Import usePathname
+"use client";
 
-function LanguageSwitcher() {
+import React from "react";
+
+import { cn } from "@/lib/utils";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import { Link, usePathname } from "@/i18n/routing";
+import { useLocale } from "next-intl";
+import { Globe } from "lucide-react";
+
+export default function LanguageSwitcher() {
+  const locale = useLocale();
   const pathname = usePathname(); // Get the current path name
 
-  const handleLogout = () => {
-    // Add your logout logic here
-  };
-
-  const handleProfile = () => {
-    // Add your profile logic here
-  };
-
   return (
-    <div>
-      <Popover className={""}>
-        <PopoverTrigger asChild>
-          <Globe className={"w-6 h-6 text-white cursor-pointer"} />
-        </PopoverTrigger>
-        <PopoverContent className="w-20 p-0">
-          <div className="grid gap-4">
-            <div className="grid gap-2">
-              <div className="grid grid-cols-1 items-center gap-4">
-                <Link href={pathname} locale="ar">
-                  {" "}
-                  {/* Use the current path name */}
-                  <Button
-                    onClick={handleProfile}
-                    className="w-full flex items-center justify-start gap-2"
-                    variant="ghost"
-                  >
-                    العربية
-                  </Button>
-                </Link>
-                <Link href={pathname} locale="en">
-                  {" "}
-                  {/* Use the current path name */}
-                  <Button
-                    onClick={handleLogout}
-                    className="w-full flex items-center justify-start gap-2"
-                    variant="ghost"
-                  >
-                    EN
-                  </Button>
-                </Link>
-              </div>
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="!bg-transparent p-0 md:!text-xs lg:!text-base   !text-white font-bold hover:text-white hover:!bg-transparent ">
+            <div className="flex items-center gap-1.5">
+              <Globe className="w-5 h-5 text-white" />
+              <span>{locale == "ar" ? "العربية- AR" : "English- EN"}</span>
             </div>
-          </div>
-        </PopoverContent>
-      </Popover>
-    </div>
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[100] gap-3 p-  ">
+              <li>
+                <Link
+                  href={pathname}
+                  locale="ar"
+                  className={cn(navigationMenuTriggerStyle())}
+                >
+                  العربية- AR
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={pathname}
+                  locale="en"
+                  className={cn(navigationMenuTriggerStyle())}
+                >
+                  English- EN
+                </Link>
+              </li>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 }
-
-export default LanguageSwitcher;

@@ -7,7 +7,7 @@ function FooterSocialMedia() {
   const t = useTranslations("footerSocialMedia");
 
   return (
-    <div className="md:h-full md:flex md:flex-col md:justify-end">
+    <div className=" pt-10">
       <h4 className="text-xl text-white font-bold mb-4">{t("followUs")}</h4>
       <ul className="flex items-center gap-2">
         <li>

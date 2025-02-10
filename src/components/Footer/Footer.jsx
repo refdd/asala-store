@@ -6,6 +6,8 @@ import FooterSocialMedia from "./FooterSocialMedia";
 import FooterSubscribe from "./FooterSubscribe";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import FooterLogo from "./FooterLogo";
+import DwonloadApp from "./DwonloadApp";
 
 function Footer() {
   const t = useTranslations("footerLinks");
@@ -19,36 +21,51 @@ function Footer() {
   const links1 = [{ link_slug: "/contactUs", link_title: t("contactUs") }];
 
   return (
-    <div className="bg-[#49296A] py-9 relative mt-20 md:mt-20">
+    <div
+      style={{ background: "linear-gradient(90deg, #F4D891 0%, #CBA661 100%)" }}
+      className="py-9 relative mt-20 md:mt-20"
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-7 gap-5 md:gap-10 relative z-30">
+          <FooterLogo />
+
           <FooterOverView />
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 md:gap-10">
             <FooterLinks titleLinks={t("usefulLinks")} links={links} />
             <FooterLinks titleLinks={t("help")} links={links1} />
           </div>
-          <FooterSocialMedia />
+
           <FooterSubscribe />
+          <div className="md:col-span-2 flex flex-col items-center justify-end">
+            <DwonloadApp />
+          </div>
         </div>
       </div>
-      {/* shape 1 */}
-      <div className="absolute top-0 right-0 w-[356px] h-full hidden md:block z-10">
+      {/*  */}
+      <div className=" hidden md:block absolute top-[-5rem] left-0 w-[432px] h-[332px]">
         <div className="relative w-full h-full">
           <Image
-            alt="footer shape"
-            title="footer shape"
-            src={"/assets/images/footerOverivew.svg"}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
-            loading="lazy"
-            quality={60}
+            src="/assets/images/footerlogolayout.svg"
+            alt="footerWave"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
           />
         </div>
       </div>
-      {/* shape 2 */}
-      <div className="hidden md:block absolute top-[-10px] left-[236px] w-[428px] rotate-[22.03deg] h-[321px] bg-[#5B3E79] z-10"></div>
+      <div className=" hidden md:block absolute top-[-3rem] left-[3.9rem] w-[207px] h-[162px]">
+        <div className="relative w-full h-full">
+          <Image
+            src="/assets/images/foooterlogn.svg"
+            alt="footerWave"
+            layout="fill"
+            className="object-contain"
+          />
+        </div>
+      </div>
     </div>
   );
 }
 
 export default Footer;
+//rotate-[22.03deg]

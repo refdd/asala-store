@@ -268,3 +268,9 @@
     transform: translateY(-5px);
   }
 }
+.categoryShadow {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.productCardShadow {
+  box-shadow: 3px 3px 30px 1px #0000001a;
+}
