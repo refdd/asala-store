@@ -53,12 +53,12 @@ function NavBar({ userData }) {
       }  top-0 z-50 w-full py-1  `}
     >
       <div className=" 2xl:container md:px-10 mx-auto px-4 relative">
-        <div className="grid grid-cols-2 lg:grid-cols-8 gap-3 items-center ">
+        <div className="grid grid-cols-3 lg:grid-cols-8 gap-3 items-center ">
           <LogoNav navbar={navbar} />
           <div className="col-span-4 hidden md:block">
             <MainSearch navbar={navbar} />
           </div>
-          <div className=" md:hidden flex items-center justify-end gap-4">
+          <div className=" col-span-2 md:hidden flex items-center justify-end gap-4">
             <CartNavIcon />
             <ProfilNavIcon userData={userData} />
             <LanguageSwitcher />
@@ -76,7 +76,7 @@ function NavBar({ userData }) {
         /> */}
       </div>
       {!navbar && (
-        <div className="absolute w-[240px]  h-full top-0 -left-14 bg-[#FFFFFFBF] rounded-r-[30px] z-10" />
+        <div className="absolute w-[225px] hidden md:block  h-full top-0 -left-14 bg-[#FFFFFFBF] rounded-r-[30px] z-10" />
       )}
     </div>
   );

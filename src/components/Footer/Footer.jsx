@@ -5,13 +5,14 @@ import FooterLinks from "./FooterLinks";
 import FooterSocialMedia from "./FooterSocialMedia";
 import FooterSubscribe from "./FooterSubscribe";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import FooterLogo from "./FooterLogo";
 import DwonloadApp from "./DwonloadApp";
 
 function Footer() {
   const t = useTranslations("footerLinks");
-
+  const locale = useLocale();
+  const isLTR = locale === "en" ? true : false;
   const links = [
     { link_slug: "/shippingPolicy", link_title: t("shippingPolicy") },
     { link_slug: "/returnPolicy", link_title: t("returnPolicy") },
@@ -42,7 +43,12 @@ function Footer() {
         </div>
       </div>
       {/*  */}
-      <div className=" hidden md:block absolute top-[-5rem] left-0 w-[432px] h-[332px]">
+      <div
+        style={{ transform: isLTR ? "rotateY(180deg)" : "rotate(0deg)" }}
+        className={`hidden md:block absolute ${
+          isLTR ? "right-0" : "left-0"
+        } top-[-5rem]  w-[432px] h-[332px]`}
+      >
         <div className="relative w-full h-full">
           <Image
             src="/assets/images/footerlogolayout.svg"
@@ -53,7 +59,11 @@ function Footer() {
           />
         </div>
       </div>
-      <div className=" hidden md:block absolute top-[-3rem] left-[3.9rem] w-[207px] h-[162px]">
+      <div
+        className={`hidden md:block absolute ${
+          isLTR ? "right-[3.9rem]" : "left-[3.9rem]"
+        } top-[-3rem]  w-[207px] h-[162px]`}
+      >
         <div className="relative w-full h-full">
           <Image
             src="/assets/images/foooterlogn.svg"
