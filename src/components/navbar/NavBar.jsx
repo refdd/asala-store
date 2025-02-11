@@ -18,7 +18,7 @@ function NavBar({ userData }) {
   const [menuBar, setMenuBar] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const locale = useLocale();
-
+  const isRTL = locale === "ar" ? true : false;
   const dispatch = useDispatch();
   const handelMenubar = () => {
     setMenuBar(!menuBar);
@@ -76,7 +76,11 @@ function NavBar({ userData }) {
         /> */}
       </div>
       {!navbar && (
-        <div className="absolute w-[225px] hidden md:block  h-full top-0 -left-14 bg-[#FFFFFFBF] rounded-r-[30px] z-10" />
+        <div
+          className={`absolute w-[225px] hidden md:block  h-full top-0 ${
+            isRTL ? "-left-14 rounded-r-[30px] " : "-right-14 rounded-l-[30px]"
+          }  bg-[#FFFFFFBF]  z-10`}
+        />
       )}
     </div>
   );
