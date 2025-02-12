@@ -147,7 +147,7 @@ function FormCheckout() {
             setMarkerPosition={setMarkerPosition}
           />
           <div className="col-span-2 flex items-center justify-center">
-            <Button className="bg-bsMainPuple hover:bg-bsPurple text-white w-[200px] h-10">
+            <Button className="bg-bsMainBrown hover:bg-bsPurple text-white w-[200px] h-10">
               Submit
             </Button>
           </div>

@@ -234,7 +234,7 @@ function FormChangeUserInfo() {
           />
           {/* Submit Button */}
           <div className="md:col-span-2">
-            <Button className="bg-bsMainPuple hover:bg-bsPurple text-white w-full">
+            <Button className="bg-bsMainBrown hover:bg-bsPurple text-white w-full">
               {t("updateInfo")}
             </Button>
           </div>

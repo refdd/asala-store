@@ -45,7 +45,7 @@ function CardProductWillLove({
         {/* price */}
         <Link href={`/listProduct/${slug}`}>
           <div className="flex items-end gap-1 ">
-            <p className="text-2xl font-bold text-bsMainPuple ">{price}</p>
+            <p className="text-2xl font-bold text-bsMainBrown ">{price}</p>
             <p className="text-xl font-semibold text-bsSecondPupl ">دك</p>
           </div>
         </Link>

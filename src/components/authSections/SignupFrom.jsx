@@ -126,7 +126,7 @@ function SignupForm() {
             placeholder={t("addressPlaceholder")}
           />
           {/* Submit Button */}
-          <Button className="bg-bsMainPuple hover:bg-bsPurple text-white">
+          <Button className="bg-bsMainBrown hover:bg-bsPurple text-white">
             {t("submit")}
           </Button>
         </form>

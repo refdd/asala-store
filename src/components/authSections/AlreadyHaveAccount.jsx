@@ -10,7 +10,7 @@ function AlreadyHaveAccount() {
     <div className="pt-4">
       {t("haveAccount")}{" "}
       <Link href="/auth/login" className="">
-        <span className="text-bsMainPuple">{t("login")}</span>
+        <span className="text-bsMainBrown">{t("login")}</span>
       </Link>
     </div>
   );

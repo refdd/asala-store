@@ -10,7 +10,7 @@ function IhaveAccount() {
     <p className="pt-4">
       {t("noAccount")}{" "}
       <Link href="/auth/signup" className="">
-        <span className="text-bsMainPuple">{t("signup")}</span>
+        <span className="text-bsMainBrown">{t("signup")}</span>
       </Link>
     </p>
   );

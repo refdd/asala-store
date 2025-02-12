@@ -26,7 +26,6 @@ function SingleProductAddTOCart({ t, productId, quantity }) {
     formData.append("quantity", quantity);
 
     const result = await addToCart(formData);
-    console.log(result);
 
     if (result.success) {
       toast({
@@ -42,7 +41,7 @@ function SingleProductAddTOCart({ t, productId, quantity }) {
     <div className="choose-quantity flex items-center max-xl:flex-wrap lg:justify-between gap-5 mt-4">
       <Button
         onClick={handleAddToCart}
-        className="bg-bsMainPuple w-full md:w-[300px] hover:bg-bsPurple text-white font-semibold py-2 px-4 rounded"
+        className="bg-bsMainBrown w-full md:w-[300px] hover:bg-bsPurple text-white font-semibold py-2 px-4 rounded"
       >
         <span>{t("addToCart")}</span>
       </Button>

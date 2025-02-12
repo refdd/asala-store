@@ -31,7 +31,6 @@ function SubscribeNow() {
         }
       )
       .then((res) => {
-        console.log(res);
         reset();
         toast({
           title: t("successTitle"),
@@ -69,7 +68,7 @@ function SubscribeNow() {
               type="email" // Use type="email" for better validation
               className={` ${
                 locale == "ar" ? "pr-5 " : " pl-5 "
-              }  h-[50px]  w-full rounded-[15px] bg-[#e4a4fb7a]  z-10 text-bsMainPuple placeholder:text-bsMainPuple placeholder:text-sm placeholder:font-semibold focus:outline-none focus:border-blue-500`}
+              }  h-[50px]  w-full rounded-[15px] bg-[#e4a4fb7a]  z-10 text-bsMainBrown placeholder:text-bsMainBrown placeholder:text-sm placeholder:font-semibold focus:outline-none focus:border-blue-500`}
             />
             {errors.email && (
               <span className="text-red-500">{errors.email.message}</span>
@@ -77,7 +76,7 @@ function SubscribeNow() {
           </div>
           <Button
             type="submit"
-            className="text-white bg-[#E4A4FB] hover:bg-bsMainPuple rounded-[15px] shadow-none font-bold relative z-20 h-[50px]"
+            className="text-white bg-[#E4A4FB] hover:bg-bsMainBrown rounded-[15px] shadow-none font-bold relative z-20 h-[50px]"
           >
             {t("subscribeButton")}{" "}
           </Button>

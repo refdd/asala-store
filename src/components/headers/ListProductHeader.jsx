@@ -10,7 +10,7 @@ function ListProductHeader() {
   return (
     <div className="container mx-auto px-4">
       <div className="flex items-center justify-between py-5 border-b">
-        <h4 className="text-2xl text-bsMainPuple font-semibold">
+        <h4 className="text-2xl text-bsMainBrown font-semibold">
           {t("storeName")}
         </h4>
         <div className="">

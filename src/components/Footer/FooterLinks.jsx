@@ -8,7 +8,7 @@ function FooterLinks({ titleLinks, links }) {
       <ul className="flex flex-col gap-4">
         {links?.map((item, index) => (
           <li
-            className="text-white text-sm font-bold transition-all md:hover:text-bsMainPuple"
+            className="text-white text-sm font-bold transition-all md:hover:text-bsMainBrown"
             key={index}
           >
             <Link prefetch={true} href={item.link_slug}>

@@ -74,7 +74,7 @@ function LoginForm() {
             }}
             placeholder={t("passwordPlaceholder")}
           />
-          <Button className="bg-bsMainPuple hover:bg-bsPurple text-white">
+          <Button className="bg-bsMainBrown hover:bg-bsPurple text-white">
             {t("submitButton")}
           </Button>
         </form>

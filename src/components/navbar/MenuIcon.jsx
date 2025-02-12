@@ -34,7 +34,7 @@ function MenuIcon({ handelMenubar }) {
             </SheetTitle>
             <ul className="flex-col overflow-y-auto w-full pt-5">
               {!session && (
-                <li className="text-bsMainPuple font-semibold py-1 text-left cursor-pointer">
+                <li className="text-bsMainBrown font-semibold py-1 text-left cursor-pointer">
                   <SheetClose asChild>
                     <Link href="/auth/login">
                       <TranslatedTypography i18nKey="login" variant="subtitle1">
@@ -44,7 +44,7 @@ function MenuIcon({ handelMenubar }) {
                   </SheetClose>
                 </li>
               )}
-              <li className="text-bsMainPuple font-semibold py-1 text-left cursor-pointer">
+              <li className="text-bsMainBrown font-semibold py-1 text-left cursor-pointer">
                 <SheetClose asChild>
                   <Link href="/aboutUs">
                     <TranslatedTypography i18nKey="aboutUs" variant="subtitle1">
@@ -53,7 +53,7 @@ function MenuIcon({ handelMenubar }) {
                   </Link>
                 </SheetClose>
               </li>
-              <li className="text-bsMainPuple font-semibold py-1 text-left cursor-pointer">
+              <li className="text-bsMainBrown font-semibold py-1 text-left cursor-pointer">
                 <SheetClose asChild>
                   <Link href="/listProduct">
                     <TranslatedTypography
@@ -65,7 +65,7 @@ function MenuIcon({ handelMenubar }) {
                   </Link>
                 </SheetClose>
               </li>
-              <li className="text-bsMainPuple font-semibold py-1 text-left cursor-pointer">
+              <li className="text-bsMainBrown font-semibold py-1 text-left cursor-pointer">
                 <SheetClose asChild>
                   <Link href="/contactUs">
                     <TranslatedTypography

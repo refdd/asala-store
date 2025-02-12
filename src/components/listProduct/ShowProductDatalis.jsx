@@ -60,7 +60,7 @@ export default function ShowProductDatalis({ slug }) {
         </SheetHeader>
         {loading ? (
           <div className="w-full h-full flex justify-center items-center">
-            <div className="w-20 h-20 animate-spin rounded-full border-t-2 border-b-2 border-bsMainPuple"></div>
+            <div className="w-20 h-20 animate-spin rounded-full border-t-2 border-b-2 border-bsMainBrown"></div>
           </div>
         ) : (
           <ProductDetails product={product} slug={productId} />

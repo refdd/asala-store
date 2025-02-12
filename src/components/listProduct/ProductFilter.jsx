@@ -29,7 +29,7 @@ function ProductFilter({ categories }) {
           <div
             className={`px-4 py-2 rounded-lg whitespace-nowrap ${
               activeCategory === "all products"
-                ? "bg-bsMainPuple text-white"
+                ? "bg-bsMainBrown text-white"
                 : "bg-gray-100 hover:bg-gray-200"
             } cursor-pointer`}
             onClick={() => handleCategoryClick({ name: "all products" })}
@@ -44,7 +44,7 @@ function ProductFilter({ categories }) {
             key={category.id}
             className={`flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap ${
               activeCategory === category.name
-                ? "bg-bsMainPuple text-white"
+                ? "bg-bsMainBrown text-white"
                 : "bg-gray-100 hover:bg-gray-200"
             } cursor-pointer`}
             onClick={() => handleCategoryClick(category)}

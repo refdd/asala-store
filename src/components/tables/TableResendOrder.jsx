@@ -73,7 +73,7 @@ export function TableResendOrder({ ordersUser }) {
                       <span className="text-sm text-gray-500">
                         {order.mobile}
                       </span>
-                      <Phone className="w-4 h-4 text-bsMainPuple" />
+                      <Phone className="w-4 h-4 text-bsMainBrown" />
                     </div>
                   </div>
                 </div>

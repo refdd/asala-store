@@ -17,7 +17,6 @@ async function UserProfile({ params }) {
     locale,
     session?.user?.token
   );
-  console.log(userInfo);
 
   return (
     <div>

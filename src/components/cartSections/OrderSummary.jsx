@@ -29,7 +29,7 @@ function OrderSummary({}) {
         <Link href={`/checkout`}>
           <Button
             variant="outline"
-            className="w-full bg-bsMainPuple text-white hover:bg-bsSecondPupl hover:text-white h-10"
+            className="w-full bg-bsMainBrown text-white hover:bg-bsSecondPupl hover:text-white h-10"
           >
             Proceed to Checkout
           </Button>

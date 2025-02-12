@@ -9,7 +9,7 @@ function UserOrderView({ price, title, image }) {
 
   return (
     <div className="md:col-span-2">
-      <h4 className="text-2xl text-bsMainPuple font-semibold"> Your Order</h4>
+      <h4 className="text-2xl text-bsMainBrown font-semibold"> Your Order</h4>
       {/* prodcut */}
       <ScrollArea className="grid grid-cols-1  gap-4 md:h-[400px] ">
         {cartItems?.items?.map((item) => (

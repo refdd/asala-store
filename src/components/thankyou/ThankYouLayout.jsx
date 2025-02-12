@@ -11,7 +11,7 @@ function ThankYouLayout() {
           Your order has been successfully placed. We appreciate your business!
         </p>
         <Link href={`/`}>
-          <Button className="bg-bsMainPuple hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+          <Button className="bg-bsMainBrown hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
             Back to Shipping
           </Button>
         </Link>

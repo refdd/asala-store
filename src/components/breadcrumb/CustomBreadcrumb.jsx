@@ -23,17 +23,17 @@ export default function CustomBreadcrumb({ items }) {
             <div key={index} className="flex items-center">
               {index > 0 && (
                 <BreadcrumbSeparator
-                  className={"text-white hover:!text-bsMainPuple "}
+                  className={"text-white hover:!text-bsMainBrown "}
                 />
               )}
               {item.href ? (
                 <BreadcrumbItemBase
                   className={
-                    "!text-white hover:!text-bsMainPuple !text-lg !font-semibold"
+                    "!text-white hover:!text-bsMainBrown !text-lg !font-semibold"
                   }
                 >
                   <BreadcrumbLink
-                    className={"text-white hover:!text-bsMainPuple "}
+                    className={"text-white hover:!text-bsMainBrown "}
                     href={item.href}
                   >
                     {item.label}

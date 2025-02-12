@@ -26,7 +26,7 @@
 //               <p className="text-4xl font-semibold text-bsSecondPupl -ml-2 -mt-4">
 //                 %
 //               </p>
-//               <p className="text-2xl font-bold text-bsMainPuple leading-[56.22px]">
+//               <p className="text-2xl font-bold text-bsMainBrown leading-[56.22px]">
 //                 {discount}
 //               </p>
 //             </div>
@@ -62,7 +62,7 @@
 //         {/* price */}
 //         <Link href={`/listProduct/${slug}`}>
 //           <div className="flex items-end gap-1 ">
-//             <p className="text-2xl font-bold text-bsMainPuple ">{price}</p>
+//             <p className="text-2xl font-bold text-bsMainBrown ">{price}</p>
 //             <p className="text-xl font-semibold text-bsSecondPupl ">دك</p>
 //           </div>
 //         </Link>

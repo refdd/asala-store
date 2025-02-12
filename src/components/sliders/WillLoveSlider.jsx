@@ -60,7 +60,7 @@ function WillLoveSlider({ products }) {
           {products?.map((product) => (
             <CarouselItem
               key={product.id}
-              className="md:basis-1/2 lg:basis-1/2 pl-2 md:pl-4"
+              className="md:basis-1/3 lg:basis-1/4 pl-2 md:pl-4"
             >
               <CardProductWillLove
                 title={product.name}

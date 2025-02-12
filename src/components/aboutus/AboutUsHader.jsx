@@ -8,7 +8,7 @@ function AboutUsHeader() {
   return (
     <div>
       <div className="">
-        <div className="text-2xl text-bsMainPuple font-bold text-center">
+        <div className="text-2xl text-bsMainBrown font-bold text-center">
           {t("title")} {/* Use translated title */}
         </div>
         <div className="body1 text-center md:mt-7 mt-5">

@@ -4,7 +4,7 @@ import FormCheckout from "./FormCheckout";
 function CheckoutLayout() {
   return (
     <div className="md:col-span-3">
-      <h4 className="text-2xl text-bsMainPuple font-semibold"> Information</h4>
+      <h4 className="text-2xl text-bsMainBrown font-semibold"> Information</h4>
       <FormCheckout />
     </div>
   );

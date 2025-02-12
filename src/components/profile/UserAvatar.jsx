@@ -5,8 +5,6 @@ import React from "react";
 function UserAvatar() {
   const { data: session } = useSession();
 
-  console.log(session);
-
   return (
     <div className="flex flex-col items-center justify-center">
       {session?.user?.image ? (

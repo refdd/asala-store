@@ -15,7 +15,6 @@ function AddToCartAction({ productId, quantity }) {
   const router = useRouter();
   const { data: session } = useSession();
   const locale = useLocale();
-  console.log(session);
 
   const handleAddToCart = async () => {
     if (!session) {

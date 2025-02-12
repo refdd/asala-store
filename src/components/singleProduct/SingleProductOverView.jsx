@@ -40,20 +40,20 @@ function SingleProductOverView({
 
   return (
     <div className="">
-      <div className="flex justify-between">
+      <div className="flex flex-col">
         <div>
-          <div className="text-lg text-bsMainPuple font-bold uppercase">
+          {/* <div className="text-lg text-bsMainBrown font-bold uppercase">
             {category}
-          </div>
-          <div className="font-semibold mt-1">{title}</div>
+          </div> */}
+          <div className="text-4xl font-bold my-2">{title}</div>
         </div>
         <div className="flex items-center gap-1 ">
           <div className="rate flex gap-1">{renderStars(rating)}</div>
-          <span className="caption1 text-bsMainPuple">{t("reviews")}</span>
+          <span className="caption1 text-bsMainBrown">{t("reviews")}</span>
         </div>
       </div>
-      <div className="flex items-center gap-3 flex-wrap mt-5 pb-6 border-b border-line">
-        <div className="text-2xl text-bsMainPuple font-semibold">${price}</div>
+      <div className="flex items-center gap-3 flex-wrap mt-5  ">
+        <div className="text-2xl font-bold ">${price}</div>
         <div className="w-px h-4 bg-line"></div>
       </div>
       <div className="font-medium  text-black mt-3">{description}</div>
@@ -92,10 +92,10 @@ function SingleProductOverView({
           <div className="list-tag text-black">{status}</div>
         </div>
       </div>
-      <div className="get-it mt-6 pb-8 border-b border-line">
+      {/* <div className="get-it mt-6 pb-8 border-b border-line">
         <div className="heading5">{t("getItToday")}</div>
         <div className="item flex items-center gap-3 mt-4">
-          <FaShippingFast className="text-bsMainPuple text-4xl" />
+          <FaShippingFast className="text-bsMainBrown text-4xl" />
           <div>
             <div className="text-lg font-semibold">{t("freeShipping")}</div>
             <div className="caption1 text-black font-semibold mt-1">
@@ -104,7 +104,7 @@ function SingleProductOverView({
           </div>
         </div>
         <div className="item flex items-center gap-3 mt-4">
-          <MdSupportAgent className="text-bsMainPuple text-4xl" />
+          <MdSupportAgent className="text-bsMainBrown text-4xl" />
           <div>
             <div className="text-lg font-semibold">{t("supportEveryday")}</div>
             <div className="caption1 text-black font-semibold mt-1">
@@ -113,7 +113,7 @@ function SingleProductOverView({
           </div>
         </div>
         <div className="item flex items-center gap-3 mt-4">
-          <MdAssignmentReturn className="text-bsMainPuple text-4xl" />
+          <MdAssignmentReturn className="text-bsMainBrown text-4xl" />
           <div>
             <div className="text-lg font-semibold">{t("dayReturns")}</div>
             <div className="caption1 text-black font-semibold mt-1">
@@ -121,7 +121,7 @@ function SingleProductOverView({
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

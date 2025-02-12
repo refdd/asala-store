@@ -68,10 +68,10 @@ function GridProducts({ related_products }) {
           cardColor={"#FFEBEB"}
           roundedPosition={isRTL ? "rounded-tr-[50px]" : "rounded-tl-[50px]"}
         />
-        {productsFromImage.slice(0, 3).map((product) => (
+        {productsFromImage.slice(0, 3).map((product, index) => (
           <>
             <CardProduct
-              key={product.id}
+              key={index}
               title={product.title}
               price={product.price}
               image={product.image}
@@ -92,9 +92,9 @@ function GridProducts({ related_products }) {
           roundedPosition={isRTL ? "rounded-br-[50px]" : "rounded-bl-[50px]"}
         />
 
-        {productsFromImage.slice(3, 6).map((product) => (
+        {productsFromImage.slice(3, 6).map((product, index) => (
           <CardProduct
-            key={product.id}
+            key={index}
             title={product.title}
             price={product.price}
             image={product.image}

@@ -63,7 +63,7 @@ export function CartDrawer() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <ShoppingCart className="w-9 h-9 text-bsMainPuple cursor-pointer" />
+        <ShoppingCart className="w-9 h-9 text-bsMainBrown cursor-pointer" />
       </SheetTrigger>
       <SheetContent side={"left"} className="md:max-w-lg">
         <SheetHeader className={"border-b pb-5"}>

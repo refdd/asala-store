@@ -7,7 +7,7 @@ function MainHeaderPages({ title, breadcrumbItems }) {
   const t = useTranslations("haderPages");
   return (
     <div
-      className="py-28 relative overflow-hidden bg-bsMainPuple flex flex-col items-center justify-center"
+      className="py-28 relative overflow-hidden bg-bsMainBrown flex flex-col items-center justify-center"
       style={{ backgroundImage: "url('/assets/images/bg-about.jpg')" }}
     >
       <h1 className=" relative z-10 text-4xl font-bold text-white text-center pt-5">
