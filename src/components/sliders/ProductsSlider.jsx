@@ -53,18 +53,18 @@ const productsFromImage = [
   },
 ];
 
-function ProductsSlider({ related_products }) {
+function ProductsSlider({ products, related_products }) {
   return (
     <div className="block md:hidden">
       <Carousel>
         <CarouselContent className="py-7 px-2 md:px-0">
-          {productsFromImage.map((product) => (
+          {products.map((product) => (
             <CarouselItem
               key={product.id}
               className="md:basis-1/2 lg:basis-1/4 pl-2 md:pl-6"
             >
               <CardProduct
-                title={product.title}
+                title={product.name}
                 price={product.price}
                 image={product.image}
                 slug={product.id}

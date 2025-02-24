@@ -11,8 +11,6 @@ import { getData } from "@/utils/featchApi";
 // import {g}
 export default async function Home({ params }) {
   const { locale } = await params;
-  // const t = await getTranslations("HomePage");
-  // const session = await auth();
   const homeData = await getData("/website/home", locale);
   const {
     sliders,
@@ -22,10 +20,12 @@ export default async function Home({ params }) {
     mostRequestedProducts,
     image_offer,
   } = homeData?.data;
+  console.log(homeData?.data);
+
   return (
     <main className={""}>
       <MainHeader locale={locale} sliders={sliders} />
-      <RowMostView />
+      <RowMostView products={products} />
       <RowCategory categories={categories} />
       <TodayOffer todayoffer={todayoffer} />
       {/* <RowProducts products={products} /> */}

@@ -6,11 +6,14 @@ import { Button } from "../ui/button";
 import { loginAction } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+// import { signIn } from "@/auth";
+import { signIn } from "next-auth/react";
 
 function LoginForm() {
   const methods = useForm();
   const router = useRouter();
+  const locale = useLocale();
   const { toast } = useToast();
   const t = useTranslations("loginForm"); // Fetch translations
 
@@ -30,7 +33,12 @@ function LoginForm() {
 
     if (result.success) {
       // Redirect to the home page
-      router.push("/");
+      // router.push("/");
+      await signIn("credentials", {
+        mobile: data.mobile,
+        password: data.password,
+        redirectTo: `/${locale}`,
+      });
     } else if (result.error) {
       toast({
         title: t("errorTitle"),

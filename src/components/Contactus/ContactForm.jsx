@@ -24,7 +24,7 @@ function ContactForm() {
   const onSubmit = async (data) => {
     axios
       .post(
-        `https://perfect-teamwork.com/primesbackend/api/website/contact-us`,
+        `https://asalafoods.perfect-teamwork.com/api/website/contact-us`,
         {
           name: data.name,
           mobile: data.mobile,

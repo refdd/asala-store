@@ -20,10 +20,10 @@ const offersData = [
 function GridOfers({ todayoffer }) {
   return (
     <div className="py-7  grid md:grid-flow-col md:grid-rows-2 gap-4 md:gap-14">
-      {offersData.map((offer, index) => (
+      {todayoffer?.slice(0, 3).map((offer, index) => (
         <CardToDayOffer
           key={index}
-          title={offer.title}
+          title={offer.name}
           image={offer.image}
           mainCard={index === 2}
           indexCard={index}

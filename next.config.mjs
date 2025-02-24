@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "perfect-teamwork.com",
       },
+      {
+        protocol: "https",
+        hostname: "asalafoods.perfect-teamwork.com",
+      },
     ],
   },
 };

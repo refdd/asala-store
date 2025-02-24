@@ -3,7 +3,9 @@
     "login": "تسجيل الدخول",
     "aboutUs": "من نحن",
     "products": "المنتجات",
-    "contactUs": "اتصل بنا"
+    "contactUs": "اتصل بنا",
+    "logout": "تسجيل الخروج"
+
   },
   "footer": {
     "title": "تعرف على برايم",
@@ -74,9 +76,11 @@
     "askQuestion": "اطرح سؤالاً",
     "estimatedDelivery": "التوصيل المتوقع:",
     "itemsInStock": "عناصر في المخزن",
+    "inStock": "في المخزن",
+    "outOfStock": "إنتهى من المخزن",
     "sku": "الرمز:",
     "categories": "الفئات:",
-    "tag": "العلامة:",
+    "status": "الحالة:",
     "getItToday": "احصل عليه اليوم",
     "freeShipping": "شحن مجاني",
     "freeShippingDescription": "شحن مجاني للطلبات فوق 75 دولاراً.",
@@ -85,8 +89,16 @@
     "dayReturns": "إرجاع خلال 100 يوم",
     "dayReturnsDescription": "لست معجباً؟ احصل على استرداد. لديك 100 يوم لتحطيم قلوبنا."
   },
+  "price":{
+    "currency": "دك"
+  },
   "willLoveToo": {
     "title": " منتجات من نفس الفقه"
+  },
+  "tapsSingelProduct": {
+    "description": "الوصف",
+    "additionalInformation": "معلومات إضافية",
+    "willLoveToo": "منتجات من نفس الفقه"
   },
   "ourServers": {
     "fasterShippingTitle": "شحن أسرع",
@@ -258,5 +270,48 @@
   },
   "product": {
     "quickView": "نظرة سريعة"
+  },
+  "orderSummary": {
+    "orderSummary": "ملخص الطلب",
+    "pieces": "{cart_count} قطعة",
+    "cartCount": "عدد العناصر في السلة",
+    "totalQuantity": "الكمية الإجمالية",
+    "total": "الإجمالي",
+    "proceedToCheckout": "الانتقال إلى الدفع"
+  },
+  "userOrder": {
+    "title": "طلبك",
+    "cart_count": "عدد العناصر",
+    "total_quantity": "إجمالي الكمية",
+    "total": "الإجمالي",
+    "pieces": "قطع"
+  },
+  "checkoutForm": {
+    "fullName": "الاسم الكامل",
+    "fullNamePlaceholder": "أدخل اسمك الكامل",
+    "fullNameRequired": "الاسم الكامل مطلوب",
+    "phone": "رقم الهاتف",
+    "phonePlaceholder": "أدخل رقم هاتفك",
+    "phoneRequired": "رقم الهاتف مطلوب",
+    "whatsapp": "رقم الواتساب",
+    "whatsappPlaceholder": "أدخل رقم الواتساب",
+    "whatsappRequired": "رقم الواتساب مطلوب",
+    "address": "العنوان",
+    "addressPlaceholder": "أدخل عنوانك",
+    "addressRequired": "العنوان مطلوب",
+    "selectState": "اختر الولاية",
+    "selectStatePlaceholder": "اختر الولاية",
+    "selectStateRequired": "الولاية مطلوبة",
+    "selectCity": "اختر المدينة",
+    "selectCityPlaceholder": "اختر المدينة",
+    "selectCityRequired": "المدينة مطلوبة",
+    "selectDistrict": "اختر المنطقة",
+    "selectDistrictPlaceholder": "اختر المنطقة",
+    "selectDistrictRequired": "المنطقة مطلوبة",
+    "preferredDeliveryDate": "تاريخ التسليم المفضل",
+    "preferredDeliveryDateRequired": "تاريخ التسليم المفضل مطلوب",
+    "submitButton": "إرسال",
+    "headerForm":"معلومات الشحن",
+    "mapMarkerRequired": "الموقع مطلوب"
   }
 }

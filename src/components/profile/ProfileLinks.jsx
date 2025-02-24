@@ -2,13 +2,14 @@
 import { useRouter } from "@/i18n/routing";
 import { LogIn } from "lucide-react";
 import { signOut } from "next-auth/react";
+import { useLocale, useTranslations } from "next-intl";
 
 function ProfileLinks({ links, activeLink, handleLinkClick }) {
   const router = useRouter();
-
+  const locale = useLocale();
+  const t = useTranslations("links");
   const handleLogout = async () => {
-    await signOut({ redirect: false }); // Sign out without redirecting
-    router.push("/"); // Redirect to the home page
+    await signOut({ callbackUrl: `/${locale}`, redirect: true });
   };
 
   return (
@@ -31,7 +32,7 @@ function ProfileLinks({ links, activeLink, handleLinkClick }) {
           className="flex items-center gap-2  py-3 px-2 rounded-xl cursor-pointer"
         >
           <LogIn />
-          <span className="text-lg font-bold">تسجيل الخروج</span>
+          <span className="text-lg font-bold">{t("logout")}</span>
         </li>
       </ul>
     </div>

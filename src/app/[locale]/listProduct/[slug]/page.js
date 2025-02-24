@@ -43,6 +43,8 @@ async function ProductDetails({ params }) {
     { label: product?.data?.name, href: `/listProduct/${slug}` },
     // Last item doesn't need a href
   ];
+  console.log(product?.data?.product_images);
+
   return (
     <main className={""}>
       <MainHeaderPages
@@ -56,7 +58,7 @@ async function ProductDetails({ params }) {
             title={product?.data?.title}
             image={product?.data?.image}
           /> */}
-          <GallerySingleProduct images={images} />
+          <GallerySingleProduct images={product?.data?.product_images} />
           <div className="md:col-span-4">
             <SingleProductOverView
               title={product?.data?.name}
@@ -74,7 +76,7 @@ async function ProductDetails({ params }) {
             {/* <Willlovetoo locale={locale} /> */}
           </div>
         </div>
-        <TapsSingelProduct locale={locale} />
+        <TapsSingelProduct locale={locale} singleProduct={product?.data} />
         <OurServers />
         <RelatedProducts products={listProduct?.data?.items} />
       </div>

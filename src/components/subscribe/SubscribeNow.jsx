@@ -20,7 +20,7 @@ function SubscribeNow() {
   const onSubmit = (data) => {
     axios
       .post(
-        `https://perfect-teamwork.com/primesbackend/api/website/subscribes`,
+        `https://asalafoods.perfect-teamwork.com/api/website/subscribes`,
         {
           email: data.email,
         },

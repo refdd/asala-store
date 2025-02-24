@@ -7,7 +7,7 @@ import { House, Settings } from "lucide-react";
 import SettingsLayout from "./SettingsLayout";
 import { useTranslations } from "next-intl";
 
-function ProfileLayout({ ordersUser }) {
+function ProfileLayout({ ordersUser, userData }) {
   const t = useTranslations("profileLayout"); // Fetch translations
 
   // Define the array of links
@@ -40,7 +40,7 @@ function ProfileLayout({ ordersUser }) {
         {activeLink === "dashboard" && (
           <DashboardLayout ordersUser={ordersUser} />
         )}
-        {activeLink === "settings" && <SettingsLayout />}
+        {activeLink === "settings" && <SettingsLayout userData={userData} />}
       </div>
     </div>
   );

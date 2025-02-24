@@ -9,7 +9,7 @@ function CardMostView({ title, slug, image, description, backgroundColor }) {
 
   return (
     <div
-      className="p-5 rounded-[30px] flex flex-col md:flex-row-reverse gap-3"
+      className="p-5 rounded-[30px] flex flex-col md:flex-row-reverse gap-3 group"
       style={{ backgroundColor }}
     >
       <div className="w-3/12">

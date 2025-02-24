@@ -32,7 +32,7 @@ export default function GallerySingleProduct({ images }) {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index} className="!p-10">
-              <SingleGallery image={image} />
+              <SingleGallery image={image?.image} />
             </SwiperSlide>
           ))}
         </Swiper>

@@ -5,9 +5,10 @@ export async function loginAction(formData) {
   // Extract form data
   const mobile = formData.get("mobile");
   const password = formData.get("password");
+
   try {
     const apiResponse = await fetch(
-      "https://perfect-teamwork.com/primesbackend/api/login",
+      "https://asalafoods.perfect-teamwork.com/api/login",
       {
         method: "POST",
         headers: {
@@ -19,24 +20,18 @@ export async function loginAction(formData) {
         }),
       }
     );
+
     const apiData = await apiResponse.json();
+
     if (apiResponse.ok && apiData.success) {
-      const result = await signIn("credentials", {
-        mobile,
-        password,
-        redirect: false,
-      });
-      if (result?.error) {
-        return { error: "فشل تسجيل الدخول" };
-      } else {
-        return {
-          success: true,
-          data: {
-            user: apiData.data.user,
-            token: apiData.data.token,
-          },
-        };
-      }
+      // If the API response is successful, return the user data and token
+      return {
+        success: true,
+        data: {
+          user: apiData.data.user,
+          token: apiData.data.token,
+        },
+      };
     } else {
       // Handle API errors
       return {
@@ -59,7 +54,7 @@ export async function signupAction(formData) {
 
   try {
     const apiUrl =
-      "https://perfect-teamwork.com/primesbackend/api/website/register";
+      "https://asalafoods.perfect-teamwork.com/api/website/register";
     const apiResponse = await fetch(apiUrl, {
       method: "POST",
       headers: {

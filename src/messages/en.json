@@ -3,7 +3,8 @@
     "login": "Login",
     "aboutUs": "About us",
     "products": "Products",
-    "contactUs": "Contact us"
+    "contactUs": "Contact us",
+     "logout": "Logout"
   },
   "footer": {
     "title": "Get to know Prime",
@@ -76,9 +77,11 @@
     "itemsInStock": "items in stock",
     "sku": "SKU:",
     "categories": "Categories:",
-    "tag": "Tag:",
+    "status": "statu:",
     "getItToday": "Get it today",
     "freeShipping": "Free shipping",
+    "inStock": "In stock",
+    "outOfStock": "Out of stock",
     "freeShippingDescription": "Free shipping on orders over $75.",
     "supportEveryday": "Support everyday",
     "supportEverydayDescription": "Support from 8:30 AM to 10:00 PM everyday",
@@ -87,6 +90,14 @@
   },
   "willLoveToo": {
     "title": "You'll love this too"
+  },
+  "price":{
+    "currency": "KWD"
+  },
+  "tapsSingelProduct": {
+    "description": "Description",
+    "additionalInformation": "Additional information",
+    "willLoveToo": "Will love too"
   },
   "ourServers": {
     "fasterShippingTitle": "Faster Shipping",
@@ -259,5 +270,48 @@
   "product": {
     "quickView": "Quick View"
   }
- 
+ ,
+ "orderSummary": {
+    "orderSummary": "Order Summary",
+    "pieces": "{cart_count} pieces",
+    "cartCount": "Cart Count",
+    "totalQuantity": "Total Quantity",
+    "total": "Total",
+    "proceedToCheckout": "Proceed to Checkout"
+  },
+  "userOrder": {
+    "title": "Your Order",
+    "cart_count": "Cart Count",
+    "total_quantity": "Total Quantity",
+    "total": "Total",
+    "pieces": "pieces"
+  },
+  "checkoutForm": {
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "fullNameRequired": "Full Name is required",
+    "phone": "Phone Number",
+    "phonePlaceholder": "Enter your phone number",
+    "phoneRequired": "Phone number is required",
+    "whatsapp": "WhatsApp Number",
+    "whatsappPlaceholder": "Enter your WhatsApp number",
+    "whatsappRequired": "WhatsApp number is required",
+    "address": "Address",
+    "addressPlaceholder": "Enter your address",
+    "addressRequired": "Address is required",
+    "selectState": "Select State",
+    "selectStatePlaceholder": "Select State",
+    "selectStateRequired": "State is required",
+    "selectCity": "Select City",
+    "selectCityPlaceholder": "Select City",
+    "selectCityRequired": "City is required",
+    "selectDistrict": "Select District",
+    "selectDistrictPlaceholder": "Select District",
+    "selectDistrictRequired": "District is required",
+    "preferredDeliveryDate": "Preferred Delivery Date",
+    "preferredDeliveryDateRequired": "Preferred delivery date is required",
+    "submitButton": "Submit",
+    "headerForm":"Information" ,
+    "mapMarkerRequired": "Map marker is required"
+  }
 }

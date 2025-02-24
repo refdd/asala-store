@@ -94,7 +94,7 @@ import AddToCartAction from "../addToCart/AddToCartAction";
 
 function CardProduct({ title, image, offer, price, slug }) {
   return (
-    <div className="productCardShadow p-8 relative">
+    <div className="productCardShadow p-8 relative group">
       {/* offder */}
       <div className="absolute left-1 top-7">
         <div className="flex flex-col">

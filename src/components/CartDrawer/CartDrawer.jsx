@@ -30,7 +30,7 @@ export function CartDrawer() {
     debounce(async (newQuantity, product_id) => {
       try {
         await axios.post(
-          `https://perfect-teamwork.com/primesbackend/api/website/add-to-cart`,
+          `https://asalafoods.perfect-teamwork.com/api/website/add-to-cart`,
           {
             product_id: product_id,
             quantity: newQuantity,

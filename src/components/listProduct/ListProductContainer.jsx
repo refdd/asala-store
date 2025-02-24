@@ -81,18 +81,20 @@ const products = [
   },
 ];
 
-function ListProductContainer({}) {
-  // if (!products || products.length === 0) {
-  //   return (
-  //     <div className="flex flex-col items-center justify-center h-64 mt-8">
-  //       <AlertCircle className="w-12 h-12 text-gray-500 mb-4" />{" "}
-  //       {/* Lucide icon */}
-  //       <p className="text-gray-700 text-lg text-center">
-  //         لا توجد منتجات متاحة حاليا. الرجاء التحقق لاحقا.
-  //       </p>
-  //     </div>
-  //   );
-  // }
+function ListProductContainer({ products }) {
+  if (!products || products.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center h-64 mt-8">
+        <AlertCircle className="w-12 h-12 text-gray-500 mb-4" />{" "}
+        {/* Lucide icon */}
+        <p className="text-gray-700 text-lg text-center">
+          لا توجد منتجات متاحة حاليا. الرجاء التحقق لاحقا.
+        </p>
+      </div>
+    );
+  }
+  console.log(products);
+
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8 pt-8">
       {products.map((product, index) => (

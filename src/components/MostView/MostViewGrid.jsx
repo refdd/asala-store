@@ -1,6 +1,12 @@
 import React from "react";
 import CardMostView from "../cards/CardMostView";
-
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 const productData = [
   {
     title: "زيت الزيتون الطبيعي",
@@ -18,10 +24,27 @@ const productData = [
   },
 ];
 
-function MostViewGrid() {
+function MostViewGrid({ products }) {
+  const colors = ["#D1FCBA", "#F4D89180", "#FFD1DC", "#A7C7E7"];
   return (
     <div className="py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+      <Carousel>
+        <CarouselContent>
+          {/* <CarouselItem className="md:basis-1/2 lg:basis-1/3"></CarouselItem> */}
+          {products?.map((product, index) => (
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+              <CardMostView
+                title={product.name}
+                slug={product.id}
+                image={product.image}
+                description={product.details?.summaryDetails}
+                backgroundColor={colors[index % colors.length]}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
         {productData.map((product, index) => (
           <CardMostView
             key={index}
@@ -32,7 +55,7 @@ function MostViewGrid() {
             backgroundColor={product.backgroundColor}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

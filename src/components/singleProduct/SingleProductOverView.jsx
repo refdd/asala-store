@@ -21,7 +21,7 @@ function SingleProductOverView({
   productId,
 }) {
   const t = useTranslations("singleProductOverView"); // Fetch translations
-
+  const t1 = useTranslations("price");
   // Function to render star rating based on the rating prop
   const renderStars = (rating) => {
     const stars = [];
@@ -49,35 +49,28 @@ function SingleProductOverView({
         </div>
         <div className="flex items-center gap-1 ">
           <div className="rate flex gap-1">{renderStars(rating)}</div>
-          <span className="caption1 text-bsMainBrown">{t("reviews")}</span>
+          {/* <span className="caption1 text-bsMainBrown">{t("reviews")}</span> */}
         </div>
       </div>
       <div className="flex items-center gap-3 flex-wrap mt-5  ">
-        <div className="text-2xl font-bold ">${price}</div>
+        <div className="text-2xl font-bold ">
+          {t1("currency")}
+          {price}
+        </div>
         <div className="w-px h-4 bg-line"></div>
       </div>
       <div className="font-medium  text-black mt-3">{description}</div>
       <SingleProductAddTOCart t={t} productId={productId} quantity={1} />
       <div className="more-infor mt-6">
-        <div className="flex items-center gap-4 flex-wrap">
-          <div className="flex items-center gap-1">
-            <i className="ph ph-arrow-clockwise body1"></i>
-            <div className="font-semibold">{t("deliveryReturn")}</div>
-          </div>
-          <div className="flex items-center gap-1">
-            <i className="ph ph-question body1"></i>
-            <div className="font-semibold">{t("askQuestion")}</div>
-          </div>
-        </div>
-        <div className="flex items-center gap-1 mt-3">
+        {/* <div className="flex items-center gap-1 mt-3">
           <i className="ph ph-timer body1"></i>
           <div className="font-semibold">{t("estimatedDelivery")}</div>
           <div className="text-black">14 January - 18 January</div>
-        </div>
+        </div> */}
         <div className="flex items-center gap-1 mt-3">
           <i className="ph ph-eye body1"></i>
+          <div className="text-black">{t("itemsInStock")}:</div>
           <div className="font-semibold">{stock}</div>
-          <div className="text-black">{t("itemsInStock")}</div>
         </div>
         <div className="flex items-center gap-1 mt-3">
           <div className="font-semibold">{t("sku")}</div>
@@ -88,8 +81,10 @@ function SingleProductOverView({
           <div className="list-category text-black">{category}</div>
         </div>
         <div className="flex items-center gap-1 mt-3">
-          <div className="font-semibold">{t("tag")}</div>
-          <div className="list-tag text-black">{status}</div>
+          <div className="font-semibold">{t("status")}</div>
+          <div className="list-tag text-black">
+            {status == 1 ? t("inStock") : t("outOfStock")}
+          </div>
         </div>
       </div>
       {/* <div className="get-it mt-6 pb-8 border-b border-line">

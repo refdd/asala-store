@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Search } from "lucide-react";
 import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import axios from "axios";
 import { baseUrl } from "@/utils/featchApi";
 import { debounce } from "@/utils/debounce";
@@ -13,7 +13,8 @@ function MainSearch({ navbar }) {
   const [products, setProducts] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Track dropdown visibility
   const searchRef = useRef(null); // Ref for the search container
-
+  const locale = useLocale();
+  const isRTL = locale === "ar";
   // Debounced function to fetch products
   const fetchProducts = debounce((searchTerm) => {
     axios
@@ -66,7 +67,10 @@ function MainSearch({ navbar }) {
         onChange={(e) => setSearchTerm(e.target.value)}
         className={` ${
           navbar && "border border-white"
-        } h-[44px] px-[22px] w-full rounded-[15px] bg-[#cba6619e]  text-white  placeholder:text-white placeholder:font-semibold focus:outline-none  pl-4`}
+        } h-[44px] px-[22px] w-full rounded-[15px] bg-[#cba6619e]  text-white 
+         placeholder:text-white placeholder:font-semibold focus:outline-none  pl-4
+         ${isRTL ? "text-right" : ""}
+         `}
       />
       {isDropdownOpen &&
         searchTerm && ( // Only show dropdown if open and searchTerm is not empty

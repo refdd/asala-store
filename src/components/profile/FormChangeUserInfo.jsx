@@ -10,20 +10,20 @@ import { useLocale } from "next-intl";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslations } from "next-intl";
 
-function FormChangeUserInfo() {
+function FormChangeUserInfo({ userData }) {
   const { data: session, update } = useSession();
   const locale = useLocale();
   const { toast } = useToast();
   const [isUpdated, setIsUpdated] = useState(false);
+  const [selectedFile, setSelectedFile] = useState(null);
   const [isChangingPassword, setIsChangingPassword] = useState(false); // Track if user is changing password
   const t = useTranslations("formChangeUserInfo"); // Fetch translations
-
   const methods = useForm({
     defaultValues: {
-      name: session?.user?.name || "",
-      email: session?.user?.email || "",
-      mobile: session?.user?.mobile || "",
-      address: session?.user?.address || t("addressPlaceholder"),
+      name: userData?.name || "",
+      email: userData?.email || "",
+      mobile: userData?.mobile || "",
+      address: userData?.address || t("addressPlaceholder"),
       currentPassword: "",
       newPassword: "",
       confirmNewPassword: "",
@@ -61,32 +61,44 @@ function FormChangeUserInfo() {
 
   const onSubmit = async (data) => {
     try {
-      const payload = {
-        name: data.name,
-        mobile: data.mobile,
-        email: data.email,
-        address: data.address,
-      };
+      // Create a FormData object
+      const formData = new FormData();
+
+      // Append text fields to FormData
+      formData.append("name", data.name);
+      formData.append("mobile", data.mobile);
+      formData.append("email", data.email);
+      formData.append("address", data.address);
+
+      // Append the selected file if it exists
+      if (selectedFile) {
+        formData.append("imageuser", selectedFile);
+      }
 
       // Only include password fields if the user is changing the password
       if (isChangingPassword) {
-        payload.oldpassword = data.currentPassword;
-        payload.newpassword = data.newPassword;
-        payload.confirmpassword = data.confirmNewPassword;
+        formData.append("oldpassword", data.currentPassword);
+        formData.append("newpassword", data.newPassword);
+        formData.append("confirmpassword", data.confirmNewPassword);
       }
 
-      const res = await axios.post(
-        `https://perfect-teamwork.com/primesbackend/api/website/profile/updateProfile`,
-        payload,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            lang: locale,
-            Authorization: `Bearer ${session?.user?.token}`,
-          },
-        }
-      );
+      // Send the FormData as a multipart/form-data request
+      const res = await axios
+        .post(
+          `https://asalafoods.perfect-teamwork.com/api/website/profile/updateProfile`,
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+              Accept: "application/json",
+              lang: locale,
+              Authorization: `Bearer ${session?.user?.token}`,
+            },
+          }
+        )
+        .catch((err) => {
+          console.log(err);
+        });
 
       if (res.data.success) {
         await update({
@@ -96,6 +108,7 @@ function FormChangeUserInfo() {
             email: data.email,
             mobile: data.mobile,
             address: data.address,
+            image: res.data.data.image_url,
           },
         });
 
@@ -108,6 +121,8 @@ function FormChangeUserInfo() {
         });
       }
     } catch (err) {
+      console.log(err);
+
       toast({
         title: t("updateError"),
         description: err.response?.data?.message || t("updateErrorDescription"),
@@ -124,7 +139,10 @@ function FormChangeUserInfo() {
           onSubmit={handleSubmit(onSubmit)}
           className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-5"
         >
-          <ChangeAvatar />
+          <ChangeAvatar
+            setSelectedFile={setSelectedFile}
+            defaultImage={userData?.image}
+          />
           {/* Name Field */}
           <CustomInput
             label={t("fullName")}
@@ -234,7 +252,7 @@ function FormChangeUserInfo() {
           />
           {/* Submit Button */}
           <div className="md:col-span-2">
-            <Button className="bg-bsMainBrown hover:bg-bsPurple text-white w-full">
+            <Button className="bg-bsMainPuple hover:bg-bsPurple text-white w-full">
               {t("updateInfo")}
             </Button>
           </div>

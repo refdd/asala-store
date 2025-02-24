@@ -10,17 +10,19 @@ import { executeCartItems } from "@/redux/cartSlice";
 import { debounce } from "@/utils/debounce";
 
 function OrdersTable() {
-  const { cartItems } = useSelector((state) => state.cartItems);
+  const { cartItems, cartinfo } = useSelector((state) => state.cartItems);
   const { data: session } = useSession();
   const locale = useLocale();
   const dispatch = useDispatch();
+  // console.log(cartItems, "cartItems");
+  // console.log(cartinfo, "cartinfo");
 
   // Debounced function to handle quantity changes
   const debouncedHandleQuantityChange = useCallback(
     debounce(async (newQuantity, product_id) => {
       try {
         await axios.post(
-          `https://perfect-teamwork.com/primesbackend/api/website/add-to-cart`,
+          `https://asalafoods.perfect-teamwork.com/api/website/add-to-cart`,
           {
             product_id: product_id,
             quantity: newQuantity,
@@ -50,10 +52,9 @@ function OrdersTable() {
   };
 
   const handleRemove = (cartId) => {
-    console.log("Remove", cartId);
     axios
       .post(
-        "https://perfect-teamwork.com/primesbackend/api/website/remove-cart",
+        "https://asalafoods.perfect-teamwork.com/api/website/remove-cart",
         { cart_id: cartId },
         {
           headers: {
@@ -84,7 +85,8 @@ function OrdersTable() {
             key={item.id}
             title={item.product.name}
             image={item.product.image}
-            price={item.product.price}
+            price={item.price}
+            totalPrice={item?.total_price}
             allQuantity={item.quantity}
             product_id={item.product?.id}
             onQuantityChange={handleQuantityChange}

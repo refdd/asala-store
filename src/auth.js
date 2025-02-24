@@ -21,7 +21,7 @@ export const {
       async authorize(credentials) {
         try {
           const res = await fetch(
-            "https://perfect-teamwork.com/primesbackend/api/login",
+            "https://asalafoods.perfect-teamwork.com/api/login",
             {
               method: "POST",
               headers: {

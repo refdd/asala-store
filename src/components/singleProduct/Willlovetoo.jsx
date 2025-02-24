@@ -3,9 +3,9 @@ import WillLoveSlider from "../sliders/WillLoveSlider";
 import { getData } from "@/utils/featchApi";
 import HeaderWillLove from "../headers/HeaderWillLove";
 
-async function Willlovetoo({ locale }) {
+async function Willlovetoo({ locale, categoryId }) {
   const listProduct = await getData(
-    `/website/getProducts?id&name&category_id=&sku=`,
+    `/website/getProducts?id&name&category_id=${categoryId || ""}&sku=`,
     locale
   );
   return (

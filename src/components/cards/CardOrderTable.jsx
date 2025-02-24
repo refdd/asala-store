@@ -1,5 +1,6 @@
 "use client";
 import { Minus, Plus, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -12,8 +13,10 @@ function CardOrderTable({
   onRemove,
   product_id,
   cartId,
+  totalPrice,
 }) {
   const [quantity, setQuantity] = useState(allQuantity);
+  const t = useTranslations("price");
 
   const handleIncrement = () => {
     setQuantity((prevQuantity) => prevQuantity + 1);
@@ -54,7 +57,10 @@ function CardOrderTable({
           </div>
         </div>
         <div className="w-1/12 price flex items-center justify-center">
-          <div className="text-title text-center">{price.toFixed(2)}</div>
+          <div className="text-title text-center">
+            {price?.toFixed(2)}
+            {t("currency")}
+          </div>
         </div>
         <div className="w-1/6 flex items-center justify-center">
           <div className="quantity-block bg-[#f7f7f7] md:p-3 p-2 flex items-center justify-between rounded-lg border border-line md:w-[100px] flex-shrink-0 w-20">
@@ -65,7 +71,8 @@ function CardOrderTable({
         </div>
         <div className="w-1/6 flex total-price items-center justify-center">
           <div className="text-title text-center">
-            {(price * quantity).toFixed(2)}
+            {totalPrice}
+            {t("currency")}
           </div>
         </div>
         <div className="w-1/12 flex items-center justify-center">

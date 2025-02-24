@@ -15,7 +15,7 @@ export async function addToCart(formData) {
   // Check if the user is authenticated
 
   try {
-    const url = `https://perfect-teamwork.com/primesbackend/api/website/add-to-cart`;
+    const url = `https://asalafoods.perfect-teamwork.com/api/website/add-to-cart`;
 
     // Make a POST request to the backend API
     const response = await axios.post(

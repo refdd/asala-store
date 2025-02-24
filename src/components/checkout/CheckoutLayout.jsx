@@ -1,11 +1,10 @@
 import React from "react";
 import FormCheckout from "./FormCheckout";
 
-function CheckoutLayout() {
+function CheckoutLayout({ states }) {
   return (
     <div className="md:col-span-3">
-      <h4 className="text-2xl text-bsMainBrown font-semibold"> Information</h4>
-      <FormCheckout />
+      <FormCheckout states={states} />
     </div>
   );
 }

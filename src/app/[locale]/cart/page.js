@@ -1,9 +1,16 @@
+import { auth } from "@/auth";
 import OrdersTable from "@/components/cartSections/OrdersTable";
 import OrderSummary from "@/components/cartSections/OrderSummary";
 import HeaderPages from "@/components/headers/HeaderPages";
+import { redirect } from "next/navigation";
 import React from "react";
 
-function CartPage() {
+async function CartPage({ params }) {
+  const { locale } = await params;
+  const session = await auth();
+  if (!session) {
+    redirect(`/${locale}`);
+  }
   return (
     <div>
       <HeaderPages title={"shopping_cart"} />

@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
 
-function ChangeAvatar() {
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [preview, setPreview] = useState(null);
+function ChangeAvatar({ setSelectedFile, defaultImage }) {
+  const [preview, setPreview] = useState(defaultImage || null);
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];

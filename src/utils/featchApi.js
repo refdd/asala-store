@@ -1,4 +1,4 @@
-export const baseUrl = "https://perfect-teamwork.com/primesbackend/api";
+export const baseUrl = "https://asalafoods.perfect-teamwork.com/api";
 
 // Helper function to get language from localStorage safely
 // function getLanguage() {

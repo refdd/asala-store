@@ -55,7 +55,7 @@ const productsFromImage = [
     image: "/assets/images/image 1.png",
   },
 ];
-function GridProducts({ related_products }) {
+function GridProducts({ products, related_products }) {
   const locale = useLocale();
   const isRTL = locale === "ar";
 
@@ -68,7 +68,7 @@ function GridProducts({ related_products }) {
           cardColor={"#FFEBEB"}
           roundedPosition={isRTL ? "rounded-tr-[50px]" : "rounded-tl-[50px]"}
         />
-        {productsFromImage.slice(0, 3).map((product, index) => (
+        {products.slice(0, 3).map((product, index) => (
           <>
             <CardProduct
               key={index}
@@ -92,7 +92,7 @@ function GridProducts({ related_products }) {
           roundedPosition={isRTL ? "rounded-br-[50px]" : "rounded-bl-[50px]"}
         />
 
-        {productsFromImage.slice(3, 6).map((product, index) => (
+        {products.slice(3, 6).map((product, index) => (
           <CardProduct
             key={index}
             title={product.title}
@@ -104,11 +104,11 @@ function GridProducts({ related_products }) {
           />
         ))}
       </div>
-      <div className="mt-16 flex items-center justify-center">
+      {/* <div className="mt-16 flex items-center justify-center">
         <Button className="bg-bsMainBrown h-12 rounded-[20px] px-14 font-bold">
           {isRTL ? " المزيد" : "View More"}
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 }

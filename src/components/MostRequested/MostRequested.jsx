@@ -9,7 +9,7 @@ function MostRequested({ mostRequestedProducts }) {
       <div className="container mx-auto px-4">
         <HeaderSection title={"most_requested_products"} />
         <ProductsSlider products={mostRequestedProducts} />
-        <GridProducts />
+        <GridProducts products={mostRequestedProducts} />
       </div>
     </div>
   );
