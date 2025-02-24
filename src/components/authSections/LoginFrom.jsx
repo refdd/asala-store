@@ -7,7 +7,6 @@ import { loginAction } from "@/app/actions";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
-// import { signIn } from "@/auth";
 import { signIn } from "next-auth/react";
 
 function LoginForm() {
@@ -33,7 +32,6 @@ function LoginForm() {
 
     if (result.success) {
       // Redirect to the home page
-      // router.push("/");
       await signIn("credentials", {
         mobile: data.mobile,
         password: data.password,
@@ -82,7 +80,7 @@ function LoginForm() {
             }}
             placeholder={t("passwordPlaceholder")}
           />
-          <Button className="bg-bsMainBrown hover:bg-bsPurple text-white">
+          <Button className="bg-bsMainPuple hover:bg-bsPurple text-white">
             {t("submitButton")}
           </Button>
         </form>

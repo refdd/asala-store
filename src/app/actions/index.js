@@ -43,7 +43,6 @@ export async function loginAction(formData) {
     return { error: "حدث خطأ أثناء تسجيل الدخول" };
   }
 }
-
 export async function signupAction(formData) {
   // Extract form data
   const name = formData.get("name");
