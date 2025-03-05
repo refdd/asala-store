@@ -64,12 +64,17 @@ function ProductsSlider({ products, related_products }) {
               className="md:basis-1/2 lg:basis-1/4 pl-2 md:pl-6"
             >
               <CardProduct
-                title={product.name}
+                title={product.name || product.name_of_product}
+                desc={product.details?.summaryDetails}
+                rate={product.stars}
                 price={product.price}
-                image={product.image}
-                slug={product.id}
+                salingPrice={product.selling_price}
+                image={product.image || product.image_url}
+                discount={product.discount}
+                slug={
+                  !related_products ? product.id : product.product_similar_id
+                }
                 related_products={related_products}
-                offer={product.offer}
               />
             </CarouselItem>
           ))}

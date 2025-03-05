@@ -31,7 +31,7 @@ function MainSlider({ sliders }) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliders.length);
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % sliderData.length);
     }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
@@ -39,7 +39,7 @@ function MainSlider({ sliders }) {
 
   return (
     <div
-      style={{ backgroundImage: `url(${sliders[currentSlide]?.image})` }}
+      style={{ backgroundImage: `url(${sliderData[currentSlide]?.image})` }}
       className="py-[100px] relative md:py-0 md:min-h-[calc(100vh-3rem-3rem)] flex items-center bg-no-repeat bg-center bg-cover"
     >
       <div className="container mx-auto px-4">
@@ -49,16 +49,16 @@ function MainSlider({ sliders }) {
 
           {/* Content */}
           <MainSliderContent
-            title={sliders[currentSlide]?.name}
+            title={sliderData[currentSlide]?.name}
             description={sliderData[currentSlide]?.detail}
-            // description={sliders[currentSlide].detail}
-            link={sliders[currentSlide]?.link}
+            // description={sliderData[currentSlide].detail}
+            link={sliderData[currentSlide]?.link}
           />
         </div>
       </div>
       {/* Navigation Dots */}
       <NavigationDots
-        sliderData={sliders}
+        sliderData={sliderData}
         handleDotClick={handleDotClick}
         currentSlide={currentSlide}
       />

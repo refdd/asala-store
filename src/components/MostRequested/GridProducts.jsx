@@ -58,6 +58,7 @@ const productsFromImage = [
 function GridProducts({ products, related_products }) {
   const locale = useLocale();
   const isRTL = locale === "ar";
+  console.log(products);
 
   return (
     <div className="hidden md:block pt-10">
@@ -71,13 +72,15 @@ function GridProducts({ products, related_products }) {
         {products.slice(0, 3).map((product, index) => (
           <>
             <CardProduct
-              key={index}
-              title={product.title}
+              title={product.name || product.name_of_product}
+              desc={product.details?.summaryDetails}
+              rate={product.stars}
               price={product.price}
-              image={product.image}
-              slug={product.id}
+              salingPrice={product.selling_price}
+              image={product.image || product.image_url}
+              discount={product.discount}
+              slug={!related_products ? product.id : product.product_similar_id}
               related_products={related_products}
-              offer={product.offer}
             />
           </>
         ))}
@@ -94,13 +97,15 @@ function GridProducts({ products, related_products }) {
 
         {products.slice(3, 6).map((product, index) => (
           <CardProduct
-            key={index}
-            title={product.title}
+            title={product.name || product.name_of_product}
+            desc={product.details?.summaryDetails}
+            rate={product.stars}
             price={product.price}
-            image={product.image}
-            slug={product.id}
+            salingPrice={product.selling_price}
+            image={product.image || product.image_url}
+            discount={product.discount}
+            slug={!related_products ? product.id : product.product_similar_id}
             related_products={related_products}
-            offer={product.offer}
           />
         ))}
       </div>

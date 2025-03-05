@@ -58,7 +58,10 @@ async function ProductDetails({ params }) {
             title={product?.data?.title}
             image={product?.data?.image}
           /> */}
-          <GallerySingleProduct images={product?.data?.product_images} />
+          <GallerySingleProduct
+            images={product?.data?.product_images}
+            image={product?.data?.image}
+          />
           <div className="md:col-span-4">
             <SingleProductOverView
               title={product?.data?.name}

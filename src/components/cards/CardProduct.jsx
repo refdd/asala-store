@@ -91,33 +91,50 @@ const OfferIcon = () => {
 import Image from "next/image";
 import React from "react";
 import AddToCartAction from "../addToCart/AddToCartAction";
+import { Link } from "@/i18n/routing";
 
-function CardProduct({ title, image, offer, price, slug }) {
+function CardProduct({
+  desc,
+  title,
+  rate,
+  price,
+  image,
+  discount,
+  slug,
+  related_products,
+  salingPrice,
+}) {
   return (
     <div className="productCardShadow p-8 relative group">
       {/* offder */}
-      <div className="absolute left-1 top-7">
-        <div className="flex flex-col">
-          <p className="text-lg font-bold text-bsMainRed">{offer}</p>
-          <OfferIcon />
+      {discount !== 0 && discount && (
+        <div className="absolute left-1 top-7">
+          <div className="flex flex-col">
+            <p className="text-lg font-bold text-bsMainRed">{offer}</p>
+            <OfferIcon />
+          </div>
         </div>
-      </div>
+      )}
       {/* image */}
-      <div className="relative w-full h-[192px] md:h-[210px] border border-[#82D627CC] ">
-        <Image
-          alt={title}
-          title={title}
-          src={image}
-          // src={"/assets/images/image 1.png"}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
-          loading="lazy"
-          className="object-contain py-3 rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-105"
-        />
-      </div>
-      <div className="mt-5">
-        <p className=" font-bold text-bsMainGreen text-center">{title}</p>
-      </div>
+      <Link href={`/listProduct/${slug}`}>
+        <div className="relative w-full h-[192px] md:h-[210px] border border-[#82D627CC] ">
+          <Image
+            alt={title}
+            title={title}
+            src={image}
+            // src={"/assets/images/image 1.png"}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
+            loading="lazy"
+            className="object-contain py-3 rounded-xl transition-transform duration-300 ease-in-out group-hover:scale-105"
+          />
+        </div>
+      </Link>
+      <Link href={`/listProduct/${slug}`}>
+        <div className="mt-5">
+          <p className=" font-bold text-bsMainGreen text-center">{title}</p>
+        </div>
+      </Link>
       {/* price */}
       <div className="mt-5 flex items-center justify-between">
         <p className="flex flex-col ">

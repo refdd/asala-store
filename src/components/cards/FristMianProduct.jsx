@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 function FristMianProduct({ offer, image, cardColor, roundedPosition }) {
   const t = useTranslations("buttonOrder");
@@ -30,12 +31,14 @@ function FristMianProduct({ offer, image, cardColor, roundedPosition }) {
         />
       </div>
       <div className="absolute top-[80%] left-1/2 -translate-x-1/2 -translate-y-1/2  flex items-center justify-center ">
-        <Button
-          //   onClick={handleAddToCart}
-          className="px-10 h-10 hover:bg-bsMainGreen rounded-[20px] bg-[#82D627CC] border border-white text-white"
-        >
-          {t("seeMore")}
-        </Button>
+        <Link href={`/listProduct`}>
+          <Button
+            //   onClick={handleAddToCart}
+            className="px-10 h-10 hover:bg-bsMainGreen rounded-[20px] bg-[#82D627CC] border border-white text-white"
+          >
+            {t("seeMore")}
+          </Button>
+        </Link>
       </div>
     </div>
   );
